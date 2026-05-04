@@ -89,9 +89,9 @@
     transition: transform 0.25s ease; position: relative;
   }
   .artwork-card:hover { transform: scale(1.025); }
-  .artwork-card img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #f0ede8; display: block; }
+  .artwork-card img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: var(--white); display: block; }
   .artwork-placeholder {
-    width: 100%; aspect-ratio: 4/3; background: #f0ede8;
+    width: 100%; aspect-ratio: 4/3; background: var(--white);
     display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 13px;
   }
 
@@ -105,20 +105,21 @@
   .series-stack::before {
     content: ''; position: absolute;
     top: 6px; left: 6px; right: -6px; bottom: -6px;
-    background: #e8e4de; border: 1px solid #d5d0ca; z-index: 0;
+    background: var(--white); border: 1px solid var(--black); z-index: 0;
   }
   .series-stack::after {
     content: ''; position: absolute;
     top: 3px; left: 3px; right: -3px; bottom: -3px;
-    background: #ece8e3; z-index: 0;
+    background: var(--white); border: 1px solid var(--black); z-index: 0;
   }
   .series-stack-img {
     position: relative; z-index: 1;
-    width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #f0ede8; display: block;
+    width: 100%; aspect-ratio: 4/3; object-fit: contain; background: var(--white); display: block;
+    border: 1px solid var(--black);
   }
   .series-stack-placeholder {
     position: relative; z-index: 1;
-    width: 100%; aspect-ratio: 4/3; background: #f0ede8;
+    width: 100%; aspect-ratio: 4/3; background: var(--white);
     display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 13px;
   }
   .card-title { font-size: 14px; font-weight: 300; color: #444; padding: 6px 0 0; }
@@ -162,13 +163,13 @@
   .lb-inner { padding: 0 40px 80px; }
 
   /* title aligns with image: margin(160px) */
-  .lb-title { font-size: 28px; font-weight: 600; margin: 16px 0 28px 160px; }
+  .lb-title { font-size: 28px; font-weight: 600; margin: 0px 0 28px 160px; }
   .lb-subtitle { font-size: 16px; font-weight: 300; color: #666; margin: 4px 0 0 160px; }
 
   .lb-main { margin: 0 160px; position: relative; }
   .lb-main img { width: 100%; max-height: 70vh; object-fit: contain; display: block; background: var(--white); }
   .lb-main-placeholder {
-    width: 100%; aspect-ratio: 4/3; background: #f0ede8;
+    width: 100%; aspect-ratio: 4/3; background: var(--white);
     display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 13px;
   }
 
@@ -297,7 +298,7 @@
   .actu-pdf a:hover { opacity: 0.5; }
 
   .text-block {
-    margin: 0 120px 36px; border: 1px solid var(--border);
+    margin: 0 120px 64px; border: 1px solid var(--border);
     padding: 24px 28px; font-size: 16px; font-weight: 300; line-height: 1.8;
   }
 
@@ -879,7 +880,7 @@
             ║  à la place de  VOTRE_CLE_WEB3FORMS                  ║
             ╚══════════════════════════════════════════════════════╝
           -->
-          <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS">
+          <input type="hidden" name="access_key" value="bacb3171-1315-4f51-b745-dd6c62791a6f">
           <input type="hidden" name="subject" value="Message depuis amelieroyer.fr">
 
           <div class="form-field">
@@ -959,18 +960,18 @@ const DATA = {
     {
       type: "single",
       src: "images/peintures/grotte_du_chaos.jpg",
-      caption: "Grotte du chaos, huile sur toile, 190×125 cm, 2024",
+      caption: "<em>Grotte du chaos</em>, huile sur toile, 190×125 cm, 2024",
       extra: "",
       photos: [
         { src: "images/peintures/grotte_du_chaos_2.jpg", caption: "DNSEP Hear Strasbourg, 2024" },
         { src: "images/peintures/grotte_du_chaos_3.jpg", caption: "DNSEP Hear Strasbourg, 2024" },
-        { src: "images/peintures/grotte_du_chaos_4.jpg", caption: "vue d'exposition Sortie de Route, 2024" },
+        { src: "images/peintures/grotte_du_chaos_4.jpg", caption: "vue d'exposition <em>Sortie de Route</em>, 2024" },
       ]
     },
     {
       type: "single",
       src: "images/peintures/nothing_is_real_1.jpg",
-      caption: "Nothing is real, huile sur toile, 110×170 cm, 2024",
+      caption: "<em>Nothing is real</em>, huile sur toile, 110×170 cm, 2024",
       extra: "",
       photos: [
         { src: "images/peintures/nothing_is_real_2.jpg", caption: "DNSEP Hear Strasbourg, 2024" },
@@ -979,49 +980,49 @@ const DATA = {
     {
       type: "single",
       src: "images/peintures/entree_principale_1.jpg",
-      caption: "Entrée principale, huile sur toile, 200×135 cm, 2024",
+      caption: "<em>Entrée principale</em>, huile sur toile, 200×135 cm, 2024",
       extra: "",
       photos: [
-        { src: "images/peintures/entree_principale_2.jpg", caption: "Vue d'exposition Sortie de route, 22Galerie, Ivry-sur-Seine, 2024" },
+        { src: "images/peintures/entree_principale_2.jpg", caption: "Vue d'exposition <em>Sortie de route</em>, 22Galerie, Ivry-sur-Seine, 2024" },
       ]
     },
      {
       type: "single",
       src: "images/peintures/salle_des_perles_1.jpg",
-      caption: "Salle des perles, huile sur toile, 200×135 cm, 2024",
+      caption: "<em>Salle des perles</em>, huile sur toile, 200×135 cm, 2024",
       extra: "",
       photos: [
-        { src: "images/peintures/salle_des_perles_2.jpg", caption: "Vue d'exposition Sortie de route, 22Galerie, Ivry-sur-Seine, 2024" },
-        { src: "images/peintures/salle_des_perles_3.jpg", caption: "Vue d'exposition Sortie de route, 22Galerie, Ivry-sur-Seine, 2024" },
-        { src: "images/peintures/salle_des_perles_4.jpg", caption: "Vue d'exposition Jouer dans la tempête, Fabrikulture, Hegenheim, Suisse, 2024" },
+        { src: "images/peintures/salle_des_perles_2.jpg", caption: "Vue d'exposition <em>Sortie de route</em>, 22Galerie, Ivry-sur-Seine, 2024" },
+        { src: "images/peintures/salle_des_perles_3.jpg", caption: "Vue d'exposition <em>Sortie de route</em>, 22Galerie, Ivry-sur-Seine, 2024" },
+        { src: "images/peintures/salle_des_perles_4.jpg", caption: "Vue d'exposition <em>Jouer dans la tempête</em>, Fabrikulture, Hegenheim, Suisse, 2024" },
       ]
     },
       {
       type: "single",
       src: "images/peintures/riviere_sans_etoiles_1.jpg",
-      caption: "Rivière sans étoiles, huile sur toile, 200×135 cm, 2025",
+      caption: "<em>Rivière sans étoiles, huile sur toile</em>, 200×135 cm, 2025",
       extra: "",
       photos: [
-        { src: "images/peintures/riviere_sans_etoiles_2.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/riviere_sans_etoiles_3.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/riviere_sans_etoiles_2.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/riviere_sans_etoiles_3.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
         { src: "images/peintures/riviere_sans_etoiles_4.jpg", caption: "détail" },
-        { src: "images/peintures/riviere_sans_etoiles_5.jpg", caption: "Vue d'exposition Enterrer le soleil, Le Quadrilatère, Beauvais, 2026" },
-        { src: "images/peintures/riviere_sans_etoiles_6.jpg", caption: "Vue d'exposition Enterrer le soleil, Le Quadrilatère, Beauvais, 2026" },
+        { src: "images/peintures/riviere_sans_etoiles_5.jpg", caption: "Vue d'exposition <em>Enterrer le soleil</em>, Le Quadrilatère, Beauvais, 2026" },
+        { src: "images/peintures/riviere_sans_etoiles_6.jpg", caption: "Vue d'exposition <em>Enterrer le soleil</em>, Le Quadrilatère, Beauvais, 2026" },
       ]
     },
      {
       type: "single",
       src: "images/peintures/concression_1.jpg",
-      caption: "Concressions, huile sur toile, 33×41 cm, 2025",
+      caption: "<em>Concressions</em>, huile sur toile, 33×41 cm, 2025",
       extra: "",
       photos: [
-        { src: "images/peintures/concression_2.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/concression_2.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
       ]
     },
      {
       type: "single",
       src: "images/peintures/gouttes_de_lethe_1.jpg",
-      caption: "Gouttes de Léthé, huile sur toile, 200×135 cm, 2025",
+      caption: "<em>Gouttes de Léthé</em>, huile sur toile, 200×135 cm, 2025",
       extra: "",
       photos: [
         { src: "images/peintures/gouttes_de_lethe_2.JPG", caption: "Installation in-situ pour l'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
@@ -1032,108 +1033,108 @@ const DATA = {
     },
      {
       type: "single",
-      src: "images/peintures/ashes_and_ghosts_1.jpg",
-      caption: "Ashes and ghosts, huile sur toile, 54×65 cm, 2024",
+      src: "images/peintures/ashes_and_ghosts_4.jpg",
+      caption: "<em>Ashes and ghosts</em>, huile sur toile, 54×65 cm, 2024",
       extra: "",
       photos: [
         { src: "images/peintures/ashes_and_ghosts_2.jpg", caption: "DNSEP Hear Strasbourg, 2024" },
-        { src: "images/peintures/ashes_and_ghosts_3.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/ashes_and_ghosts_4.JPG", caption: "Détail" },
+        { src: "images/peintures/ashes_and_ghosts_3.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/ashes_and_ghosts_1.JPG", caption: "Vue d'accrochage" },
       ]
     },
       {
       type: "single",
       src: "images/peintures/nirvana.jpg",
-      caption: "Nirvana, détrempe et huile sur toile, 54×73 cm, 2022",
+      caption: "<em>Nirvana</em>, détrempe et huile sur toile, 54×73 cm, 2022",
       extra: "",
       photos: []
     },
       {
       type: "single",
       src: "images/peintures/dans_la_nuit_1.jpg",
-      caption: "Dans la nuit, huile sur toile, 120×160 cm, 2023",
+      caption: "<em>Dans la nuit</em>, huile sur toile, 120×160 cm, 2023",
       extra: "",
       photos: [
-        { src: "images/peintures/dans_la_nuit_3.jpg", caption: "Vue d'exposition Enterrer le soleil, Le Quadrilatère, Beauvais, 2026" },
-        { src: "images/peintures/dans_la_nuit_4.JPG", caption: "DNSEP HEAR Strasbourg, 2024" },
+        { src: "images/peintures/dans_la_nuit_3.jpg", caption: "Vue d'exposition <em>Enterrer le soleil</em>, Le Quadrilatère, Beauvais, 2026" },
+        { src: "images/peintures/dans_la_nuit_4.jpg", caption: "DNSEP HEAR Strasbourg, 2024" },
         { src: "images/peintures/dans_la_nuit_2.jpg", caption: "Vue d'accrochage" },
       ]
     },
     {
       type: "single",
       src: "images/peintures/black_fog.jpg",
-      caption: "Black fog, détrempe et huile sur toile, 110×170 cm, 2024",
+      caption: "<em>Black fog</em>, détrempe et huile sur toile, 110×170 cm, 2024",
+      extra: "",
+      photos: []
+    },
+      {
+      type: "single",
+      src: "images/peintures/apparition.jpg",
+      caption: "<em>Apparition</em>, huile sur toile, 92×65 cm, 2023",
       extra: "",
       photos: []
     },
        {
       type: "single",
       src: "images/peintures/sable_2.jpg",
-      caption: "Everywhere at the end of times, sable, pigment et huile sur toile, 54×65 cm, 2025",
+      caption: "<em>Everywhere at the end of times</em>, sable, pigment et huile sur toile, 54×65 cm, 2025",
       extra: "",
       photos: [
-        { src: "images/peintures/sable_5.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/sable_4.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/sable_3.jpg", caption: "Minéralisation, vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_5.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_4.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_3.jpg", caption: "Minéralisation, vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
       ]
     },
     {
       type: "single",
       src: "images/peintures/sable_1.jpg",
-      caption: "Minéralisation, sable, pigment et huile sur toile, 54×73 cm, 2025",
+      caption: "<em>Minéralisation</em>, sable, pigment et huile sur toile, 54×73 cm, 2025",
       extra: "",
       photos: [
-        { src: "images/peintures/sable_3.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/sable_4.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/sable_5.jpg", caption: "Vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
-        { src: "images/peintures/sable_2.jpg", caption: "Everywhere at the end of times, vue d'exposition Le Puits du Dindon, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_3.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_4.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_5.jpg", caption: "Vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
+        { src: "images/peintures/sable_2.jpg", caption: "<em>Everywhere at the end of times</em>, vue d'exposition <em>Le Puits du Dindon</em>, La BCDM, Strasbourg, 2025" },
       ]
     }, 
     {
       type: "serie",
-      serieTitle: "Série «bougies»",
+      serieTitle: "Série <em>Bougies</em>",
       serieInfo: "Série de 8 peintures à l'huile, 2023",
       serieDesc: "",
       images: [
-        { src: "images/peintures/bougie_2.jpg", caption: "Étoile, huile sur toile, 38×48 cm, 2023" },
-        { src: "images/peintures/bougie_3.jpg", caption: "Cocon, huile sur toile, 33×41,5 cm, 2023" },
-        { src: "images/peintures/bougie_5.jpg", caption: "Chandelier, huile sur toile, 2023" },
-        { src: "images/peintures/bougie_1.jpg", caption: "Poteau, huile sur toile, 46×38 cm, 2023" },
-        { src: "images/peintures/bougie_4.jpg", caption: "Escargot, huile sur toile, 30×40 cm, 2023" },
-        { src: "images/peintures/bougie_8.jpg", caption: "Rouge, huile sur toile, 46×38 cm, 2023" },
-        { src: "images/peintures/bougie_6.jpg", caption: "Partie 1 du diptyque Magicochon, huile sur toile, 2023" },
-        { src: "images/peintures/bougie_7.jpg", caption: "Partie 2 du diptyque Magicochon, huile sur toile, 2023" },
+        { src: "images/peintures/bougie_2.jpg", caption: "<em>Étoile</em>, huile sur toile, 38×48 cm, 2023" },
+        { src: "images/peintures/bougie_3.jpg", caption: "<em>Cocon</em>, huile sur toile, 33×41,5 cm, 2023" },
+        { src: "images/peintures/bougie_5.jpg", caption: "<em>Chandelier</em>, huile sur toile, 2023" },
+        { src: "images/peintures/bougie_1.jpg", caption: "<em>Poteau</em>, huile sur toile, 46×38 cm, 2023" },
+        { src: "images/peintures/bougie_4.jpg", caption: "<em>Escargot</em>, huile sur toile, 30×40 cm, 2023" },
+        { src: "images/peintures/bougie_8.jpg", caption: "<em>Rouge</em>, huile sur toile, 46×38 cm, 2023" },
+        { src: "images/peintures/bougie_6.jpg", caption: "Partie 1 du diptyque <em>Magicochon</em>, huile sur toile, 2023" },
+        { src: "images/peintures/bougie_7.jpg", caption: "Partie 2 du diptyque <em>Magicochon</em>, huile sur toile, 2023" },
       ],
       extras: [
-        { src: "images/peintures/bougie_9.jpg", caption: "Vue d'exposition Cave of Doom, Strasbourg, 2023" },
+        { src: "images/peintures/bougie_9.jpg", caption: "Vue d'exposition <em>Cave of Doom</em>, Strasbourg, 2023" },
         { src: "images/peintures/bougie_10.jpg", caption: "DNSEP HEAR Strasbourg, 2024" },
       ]
     },
     {
       type: "serie",
-      serieTitle: "Série «magicochon»",
-      serieInfo: "Diptyque Magicochon, 2023",
+      serieTitle: "Série <em>Magicochon</em>",
+      serieInfo: "Diptyque <em>Magicochon</em>, 2023",
       serieDesc: "",
       images: [
-        { src: "images/peintures/bougie_6.jpg", caption: "Partie 1 du diptyque Magicochon, huile sur toile, 2023" },
-        { src: "images/peintures/bougie_7.jpg", caption: "Partie 2 du diptyque Magicochon, huile sur toile, 2023" },
+        { src: "images/peintures/bougie_6.jpg", caption: "Partie 1 du diptyque <em>Magicochon</em>, huile sur toile, 2023" },
+        { src: "images/peintures/bougie_7.jpg", caption: "Partie 2 du diptyque <em>Magicochon</em>, huile sur toile, 2023" },
       ],
       extras: [
-        { src: "images/peintures/bougie_9.jpg", caption: "Vue d'exposition Cave of Doom, Strasbourg, 2023" },
+        { src: "images/peintures/bougie_9.jpg", caption: "Vue d'exposition <em>Cave of Doom</em>, Strasbourg, 2023" },
         { src: "images/peintures/bougie_10.jpg", caption: "DNSEP HEAR Strasbourg, 2024" },
       ]
     },
     {
       type: "single",
-      src: "images/peintures/apparition.jpg",
-      caption: "Apparition, huile sur toile, 92×65 cm, 2023",
-      extra: "",
-      photos: []
-    },
-    {
-      type: "single",
       src: "images/peintures/open_the_light_1.jpg",
-      caption: "Open the light, huile sur toile, 115×170 cm, 2024",
+      caption: "<em>Open the light</em>, huile sur toile, 115×170 cm, 2024",
       extra: "",
       photos: [
         { src: "images/peintures/open_the_light_2.jpg", caption: "Détail" },
@@ -1142,7 +1143,7 @@ const DATA = {
     {
       type: "single",
       src: "images/peintures/dans_le_silence.jpg",
-      caption: "Appel du silence, huile sur toile, 13×20 cm, 2025",
+      caption: "<em>Appel du silence</em>, huile sur toile, 13×20 cm, 2025",
       extra: "",
       photos: [
         { src: "images/peintures/dans_le_silence_2.jpg", caption: "Détail" },
@@ -1150,22 +1151,22 @@ const DATA = {
     },
     {
       type: "serie",
-      serieTitle: "Série «Tunnels noirs»",
+      serieTitle: "Série <em>Tunnels noirs</em>",
       serieInfo: "Série de peintures, huile sur toile, 2023–2024",
       serieDesc: "",
       images: [
-        { src: "images/peintures/tunnel_noir_1.JPG", caption: "Tunnel noir (1), huile sur toile, 2023" },
-        { src: "images/peintures/tunnel_noir_5.JPG", caption: "Tunnel noir (2), huile sur toile, 2023" },
-        { src: "images/peintures/tunnel_noir_2.JPG", caption: "Tunnel noir (3), huile sur toile, 2023" },
-        { src: "images/peintures/tunnel_noir_3.JPG", caption: "Tunnel noir (4), huile sur toile, 2023" },
-        { src: "images/peintures/tunnel_noir_4.JPG", caption: "Tunnel noir (5), huile sur toile, 2023" },
+        { src: "images/peintures/tunnel_noir_1.jpg", caption: "<em>Tunnel noir (1)</em>, huile sur toile, 2023" },
+        { src: "images/peintures/tunnel_noir_5.jpg", caption: "<em>Tunnel noir (2)</em>, huile sur toile, 2023" },
+        { src: "images/peintures/tunnel_noir_2.jpg", caption: "<em>Tunnel noir (3)</em>, huile sur toile, 2023" },
+        { src: "images/peintures/tunnel_noir_3.jpg", caption: "<em>Tunnel noir (4)</em>, huile sur toile, 2023" },
+        { src: "images/peintures/tunnel_noir_4.jpg", caption: "<em>Tunnel noir (5)</em>, huile sur toile, 2023" },
       ],
       extras: []
     },
      {
       type: "single",
       src: "images/peintures/2022.jpg",
-      caption: "2022, gouache sur papier, 33×32 cm, 2022",
+      caption: "<em>2022</em>, gouache sur papier, 33×32 cm, 2022",
       extra: "",
       photos: [
         { src: "images/peintures/2022_1.jpg", caption: "Détail" },
@@ -1173,8 +1174,8 @@ const DATA = {
     },
     {
       type: "serie",
-      serieTitle: "Série «Léthargie»",
-      serieInfo: "Léthargie, gouaches de confinement sur papier, 2021",
+      serieTitle: "Série <em>Léthargie</em>",
+      serieInfo: "<em>Léthargie</em>, gouaches de confinement sur papier, 2021",
       serieDesc: "",
       images: [
         { src: "images/peintures/gouache_1.jpg", caption: "" },
@@ -1195,7 +1196,7 @@ const DATA = {
     {
       type: "single",
       src: "images/peintures/parking_picard_1.jpg",
-      caption: "Seau, huile sur toile, 160×120 cm, 2022",
+      caption: "<em>Parking Picard</em>, huile sur toile, 160×120 cm, 2022",
       extra: "",
       photos: [
         { src: "images/peintures/parking_picard_2.jpg", caption: "Vue d'accrochage" },
@@ -1205,33 +1206,33 @@ const DATA = {
     {
       type: "single",
       src: "images/peintures/seau.jpg",
-      caption: "Seau, huile sur toile, 50×60 cm, 2023",
+      caption: "<em>Seau</em>, huile sur toile, 50×60 cm, 2023",
       extra: "",
       photos: []
     },
     {
       type: "single",
       src: "images/peintures/chien_errant_1.jpg",
-      caption: "Chien errant, huile sur toile, 70×100 cm, 2021",
+      caption: "<em>Chien errant</em>, huile sur toile, 70×100 cm, 2021",
       extra: "",
       photos: [
-        { src: "images/peintures/chien_errant_2.JPG", caption: "Vue d'accrochage cave" },
+        { src: "images/peintures/chien_errant_2.jpg", caption: "Vue d'accrochage cave" },
       ]
     },
     {
       type: "single",
       src: "images/peintures/simone.jpg",
-      caption: "Simone, huile sur toile, 33×46 cm, 2021",
+      caption: "<em>Simone</em>, huile sur toile, 33×46 cm, 2021",
       extra: "",
       photos: []
     },
     {
       type: "single",
-      src: "images/peintures/fauteuil_1.JPG",
-      caption: "Fauteuil, huile sur toile, 50×60 cm, 2021",
+      src: "images/peintures/fauteuil_1.jpg",
+      caption: "<em>Fauteuil</em>, huile sur toile, 50×60 cm, 2021",
       extra: "",
       photos: [
-        { src: "images/peintures/fauteuil_2.JPG", caption: "Vue d'accrochage" },
+        { src: "images/peintures/fauteuil_2.jpg", caption: "Vue d'accrochage" },
       ]
     },
 
@@ -1242,64 +1243,72 @@ const DATA = {
     { 
       type: "single", 
       src: "images/gravures/dans_les_profondeurs.jpg",
-      caption: "Dans les profondeurs, aquatinte et pointe sèche, 51×76 cm, 2024",  
+      caption: "<em>Dans les profondeurs</em>, aquatinte et pointe sèche, 51×76 cm, 2024",  
       extra: "Tirage numéroté sur 15, impression sur BFK Rives", 
       photos: [
-         { src: "images/expositions/dresden_4.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde. Photo Daniel Reiswich" },
-         { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
+         { src: "images/expositions/dresden_4.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde. Photo Daniel Reiswich" },
+         { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
       ]
     },
     { 
       type: "single", 
       src: "images/gravures/death_of_dreams.jpg",
-      caption: "Death of dreams shall be a beautiful end, aquatinte, pointe sèche et verni mou, 86×57 cm, 2025",  
+      caption: "<em>Death of dreams shall be a beautiful end</em>, aquatinte, pointe sèche et verni mou, 86×57 cm, 2025",  
       extra: "Tirage numéroté sur 12, impression sur BFK Rives", 
       photos: [
-        { src: "images/gravures/death_of_dreams_2.jpg", caption: "Vue d'exposition Enterrer le soleil, Le Quadrilatère, Beauvais, 2026" },
+        { src: "images/gravures/death_of_dreams_2.jpg", caption: "Vue d'exposition <em>Enterrer le soleil</em>, Le Quadrilatère, Beauvais, 2026" },
       ]
     },
     { 
       type: "single", 
       src: "images/gravures/echoes_1.jpg",
-      caption: "Echoes, aquatinte, verni mou et pointe sèche, 51×76 cm, 2025",  
+      caption: "<em>Echoes</em>, aquatinte, verni mou et pointe sèche, 51×76 cm, 2025",  
       extra: "Tirage numéroté sur 12, impression sur BFK Rives", 
       photos: [
         { src: "images/gravures/echoes_2.jpg", caption: "État n°1" },
         { src: "images/gravures/echoes_3.jpg", caption: "État n°2" },
         { src: "images/gravures/echoes_4.jpg", caption: "État n°6" },
-        { src: "images/expositions/dresden_3.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
-        { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
+        { src: "images/expositions/dresden_3.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
+        { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
       ]
     },
     { 
       type: "single", 
-      src: "images/gravures/what_remains_1.jpg",
-      caption: "What remains, aquatinte, verni mou et pointe sèche, 41×56 cm, 2025",  
+      src: "images/gravures/what_remains_2.jpg",
+      caption: "<em>What remains</em>, aquatinte, verni mou et pointe sèche, 41×56 cm, 2025",  
       extra: "Tirage numéroté sur 15, impression sur BFK Rives", 
       photos: [
         { src: "images/gravures/what_remains_1.jpg", caption: "Épreuve d'artiste" },
-        { src: "images/expositions/dresden_4.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde. Photo Daniel Reiswich" },
-        { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
+        { src: "images/expositions/dresden_4.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde. Photo Daniel Reiswich" },
+        { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
       ]
     },
     {
       type: "serie",
-      serieTitle: "Those who go",
+      serieTitle: "<em>Those who go</em>",
       serieInfo: "aquatinte, verni mou et pointe sèche, 35,5×53,5 cm, 2025",
       serieDesc: "Tirages numéroté sur 20, impressions sur BFK Rives",
       images: [
-        { src: "images/gravures/bellow.jpg", caption: "Those who go bellow" },
-        { src: "images/gravures/bellow_3.jpg", caption: "Those who go beyond" },
-        { src: "images/gravures/bellow_2.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
-        { src: "images/expositions/dresden_3.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
-        { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
+        { src: "images/gravures/bellow.jpg", caption: "<em>Those who go bellow</em>" },
+        { src: "images/gravures/bellow_3.jpg", caption: "<em>Those who go beyond</em>" },
+        { src: "images/gravures/bellow_2.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
+        { src: "images/expositions/dresden_3.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
       ],
       extras: []
     },
     { 
       type: "single", 
+      src: "images/gravures/escalier_1.jpg",
+      caption: "<em>Escaliers</em>, aquatinte et pointe sèche, 30×40 cm, 2023",  
+      extra: "Tirage numéroté sur 20, impression sur BFK Rives 40x52 cm", 
+      photos: [
+        { src: "images/gravures/escalier_2.jpg", caption: "Épreuve d'artiste, impression bistre" },
+      ]
+    },
+    { 
+      type: "single", 
       src: "images/gravures/chien_errant1_1.jpg",
-      caption: "Chien errant (1), aquatinte, eau forte et pointe sèche, 39×48 cm, 2023",  
+      caption: "<em>Chien errant (1)</em>, aquatinte, eau forte et pointe sèche, 39×48 cm, 2023",  
       extra: "Impression sur BFK Rives", 
       photos: [
         { src: "images/gravures/chien_errant1_2.jpg", caption: "" },
@@ -1308,40 +1317,31 @@ const DATA = {
     { 
       type: "single", 
       src: "images/gravures/chien_errant_2.jpg",
-      caption: "Chien errant (2), aquatinte et pointe sèche, 30×42 cm, 2023",  
+      caption: "<em>Chien errant (2)</em>, aquatinte et pointe sèche, 30×42 cm, 2023",  
       extra: "Impression sur BFK Rives", 
       photos: []
     },
     { 
       type: "single", 
-      src: "images/gravures/escalier_1.jpg",
-      caption: "Escaliers, aquatinte et pointe sèche, 30×40 cm, 2023",  
-      extra: "Tirage numéroté sur 20, impression sur BFK Rives 40x52 cm", 
-      photos: [
-        { src: "images/gravures/escalier_2.jpg", caption: "Épreuve d'artiste, impression bistre" },
-      ]
-    },
-    { 
-      type: "single", 
       src: "images/gravures/ruine.jpg",
-      caption: "Ruine, aquatinte et pointe sèche, 35×40 cm, 2021",  
+      caption: "<em>Ruine</em>, aquatinte et pointe sèche, 35×40 cm, 2021",  
       extra: "Tirage numéroté sur 15, impression sur BFK Rives format raisin", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/gravures/sieste.jpg",
-      caption: "Sieste, aquatinte en 3 plaques de couleur, 19,5x15,5 cm, 2022",  
+      caption: "<em>Sieste</em>, aquatinte en 3 plaques de couleur, 19,5x15,5 cm, 2022",  
       extra: "Tirage numéroté sur 11, impression sur BFK Rives + quelques Épreuves d'Artiste", 
       photos: [
         { src: "images/gravures/sieste_2.jpg", caption: "Estampe dans boite américaine" },
-        { src: "images/gravures/sieste_3.jpg", caption: "Vue d'exposition Mordu.e.s, Le Préau, Maxéville, 2022, sur un mur habillé par Anna Trouillot " },
+        { src: "images/gravures/sieste_3.jpg", caption: "Vue d'exposition <em>Mordu.e.s</em>, Le Préau, Maxéville, 2022, sur un mur habillé par Anna Trouillot " },
       ]
     },
     { 
       type: "single", 
       src: "images/gravures/longue_soiree_1.jpg",
-      caption: "Longue soirée, aquatinte et pointe sèche, 29x45 cm, 2021",  
+      caption: "<em>Longue soirée</em>, aquatinte et pointe sèche, 29x45 cm, 2021",  
       extra: "Impression sur BFK Rives", 
       photos: [
         { src: "images/gravures/longue_soiree_2.jpg", caption: "État n°1" },
@@ -1352,24 +1352,24 @@ const DATA = {
     { 
       type: "single", 
       src: "images/gravures/paul_et_enzo.jpg",
-      caption: "Paul et Enzo, eau forte et aquatinte, 23x33 cm, 202O",  
+      caption: "<em>Paul et Enzo</em>, eau forte et aquatinte, 23x33 cm, 202O",  
       extra: "Tirage en 12 exemplaire. Impression sur papier Hahnemuhle 38x56 cm", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/gravures/monotype_1.jpg",
-      caption: "Monotype, 30x40, 2025",  
+      caption: "<em>Monotype</em>, 30x40, 2025",  
       extra: "Monotype réalisé avec Clément Fourment pour son projet en lien avec le Frac Picardie. Photo Clément Fourment.",
       photos: [
-        { src: "images/gravures/monotype_2.jpg", caption: "Vue d'exposition Monotype et Collection, curation Clément Fourment en lien avec le Frac Picardie, Clermont, 2025. Photo Clément Fourment." },
-        { src: "images/gravures/monotype_3.jpg", caption: "Vue d'exposition Monotype et Collection, curation Clément Fourment en lien avec le Frac Picardie, Clermont, 2025. Photo Clément Fourment." },
+        { src: "images/gravures/monotype_2.jpg", caption: "Vue d'exposition <em>Monotype et Collection</em>, curation Clément Fourment en lien avec le Frac Picardie, Clermont, 2025. Photo Clément Fourment." },
+        { src: "images/gravures/monotype_3.jpg", caption: "Vue d'exposition <em>Monotype et Collection</em>, curation Clément Fourment en lien avec le Frac Picardie, Clermont, 2025. Photo Clément Fourment." },
       ]
     },
       {
       type: "serie",
-      serieTitle: "Livre d'artiste Némo",
-      serieInfo: "NEMO, livre réalisé en gravure taille-douce (aquatinte et eau-forte) et typographie plomb. 17,75x20,5cm ",
+      serieTitle: "Livre d'artiste <em>Nemo</em>",
+      serieInfo: "<em>NEMO</em>, livre réalisé en gravure taille-douce (aquatinte et eau-forte) et typographie plomb. 17,75x20,5cm ",
       serieDesc: "Imprimé sur papier BFK rives 270g en 7 exemplaires. Chaque estampe est disponible en tiré à part.",
       images: [
         { src: "images/gravures/nemo_1.jpg", caption: "" },
@@ -1387,14 +1387,14 @@ const DATA = {
     { 
       type: "single", 
       src: "images/gravures/canap.jpg",
-      caption: "Canapé, aquatinte et pointe sèche, 2024",  
+      caption: "<em>Canapé</em>, aquatinte et pointe sèche, 2024",  
       extra: "",
       photos: []
     },
     { 
       type: "single", 
       src: "images/gravures/bois_perdu_1.jpg",
-      caption: "Paul et Enzo, bois perdu en 6 nuances de gris, 40x60 cm, 2019",  
+      caption: "<em>Oubli</em>, bois perdu en 6 nuances de gris, 40x60 cm, 2019",  
       extra: "Tirage en 6 exemplaire", 
       photos: [
         { src: "images/gravures/bois_perdu_2.jpg", caption: "" },
@@ -1403,28 +1403,28 @@ const DATA = {
     { 
       type: "single", 
       src: "images/gravures/lueur.jpg",
-      caption: "Lueur, aquatinte, 43x35 cm, 2020",  
+      caption: "<em>Lueur</em>, aquatinte, 43x35 cm, 2020",  
       extra: "Impression sur papier Hahnemuhle format 56x76 cm", 
       photos: []
     },
      { 
       type: "single", 
       src: "images/gravures/herbes.jpg",
-      caption: "Herbes folles, verni mou et aquatinte, 28x24 cm, 2020",  
+      caption: "<em>Herbes folles</em>, verni mou et aquatinte, 28x24 cm, 2020",  
       extra: "Tirage en 6 exemplaires. Impression sur papier BFK Rives 270g, 30x32 cm", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/gravures/vernimou.jpg",
-      caption: "Ruine de moulin, verni mou et aquatinte, 24x18 cm, 2020",  
+      caption: "<em>Ruine de moulin</em>, verni mou et aquatinte, 24x18 cm, 2020",  
       extra: "Tirage en 7 exemplaires. Impression sur papier Arches", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/gravures/grand_bois_1.jpg",
-      caption: "Sans titre, gravure sur bois sur fond réalisé à la main, 120x100 cm, 2021",  
+      caption: "<em>Sans titre</em>, gravure sur bois sur fond réalisé à la main, 120x100 cm, 2021",  
       extra: "Tirage en 7 exemplaires.", 
       photos: [
         { src: "images/gravures/grand_bois_2.jpg", caption: "impression sur fond ocre" },
@@ -1438,8 +1438,8 @@ const DATA = {
       serieInfo: "Série de 3 photogravues, 7x10,5 cm, 2020",
       serieDesc: "",
       images: [
-        { src: "images/gravures/photogravure_2.jpg", caption: "Chaise" },
-        { src: "images/gravures/photogravure_1.jpg", caption: "Motifs" },
+        { src: "images/gravures/photogravure_2.jpg", caption: "<em>Chaise</em>" },
+        { src: "images/gravures/photogravure_1.jpg", caption: "<em>Motifs</em>" },
       ],
       extras: []
     },
@@ -1448,67 +1448,67 @@ const DATA = {
   dessins: [
     {
       type: "serie",
-      serieTitle: "Série Effondrement",
-      serieInfo: "Effondrement, 2023, série de 14 dessins au fusain, à la pierre noire et au pastel sur papier Moulin du Verger, 43x60 cm",
+      serieTitle: "Série <em>Effondrement</em>",
+      serieInfo: "<em>Effondrement</em>, 2023, série de 14 dessins au fusain, à la pierre noire et au pastel sur papier Moulin du Verger, 43x60 cm",
       serieDesc: "Je relate ici, une déambulation silencieuse, à travers des paysages à l’abandon. <br>Ce projet reflète le malaise d’une jeunesse, qui, ne trouvant pas sa place, se refuge dans des espaces à la marge. Le titre évoque alors à la fois le sentiment d’angoisse d’un monde en destruction qui me pousse à m’engouffrer sous terre et l’affaissement des lieux traversés. <br>La lumière sera le fil rouge de la déambulation, révélant l’espace, habitant le néant. Elle incarne un espoir, une présence presque mystique dans cette obscurité totale. <br><br>Le fusain, la pierre noire, le pastel sont autant d’outils qui m’ont permis d’obtenir un fort contraste qui, avec un travail de la lumière, installe une profondeur. <br>Le processus est très long, montant les noirs couche après couche, gommant pour dessiner les volumes. Le dessin fini est empreinte du temps passé, l’espace creusé toujours plus profondément par la matière du noir. <br><br><br><br><br>5 dessins de cette série ont été primés par le Premier Prix Pierre David-Weill décerné par l’Académie des Beaux-Arts en mars 2025.",
       images: [
-        { src: "images/dessins/effondrement_8.jpg", caption: "Passage, 11/14" },
-        { src: "images/dessins/effondrement_1.jpg", caption: "L’effondrement est proche, allume pour un instant une lueur dans l’obscurité 1/14" },
-        { src: "images/dessins/effondrement_7.jpg", caption: "Passage accidenté, 2/14" },
-        { src: "images/dessins/effondrement_2.jpg", caption: "Effondrement, 3/14" },
-        { src: "images/dessins/effondrement_3.jpg", caption: "Enfouissement, 4/14" },
-        { src: "images/dessins/effondrement_11.jpg", caption: "Roches, 5/14" },
-        { src: "images/dessins/effondrement_14.jpg", caption: "Écoulement, 6/14" },
-        { src: "images/dessins/effondrement_5.jpg", caption: "Mer de silice, 7/14" },
-        { src: "images/dessins/effondrement_9.jpg", caption: "Pleine lune, 8/14" },
-        { src: "images/dessins/effondrement_4.jpg", caption: "Inhumate, 9/14" },
-        { src: "images/dessins/effondrement_10.jpg", caption: "Restes, 10/14" },
-        { src: "images/dessins/effondrement_6.jpg", caption: "Mezzanine, 12/14" },
-        { src: "images/dessins/effondrement_13.jpg", caption: "Disparition, 14/14" },
-        { src: "images/dessins/effondrement_15.jpg", caption: "Astres, 13/14" },
+        { src: "images/dessins/effondrement_8.jpg", caption: "<em>Passage</em>, 11/14" },
+        { src: "images/dessins/effondrement_1.jpg", caption: "<em>L’effondrement est proche, allume pour un instant une lueur dans l’obscurité</em> 1/14" },
+        { src: "images/dessins/effondrement_7.jpg", caption: "<em>Passage accidenté</em>, 2/14" },
+        { src: "images/dessins/effondrement_2.jpg", caption: "<em>Effondrement</em>, 3/14" },
+        { src: "images/dessins/effondrement_3.jpg", caption: "<em>Enfouissement</em>, 4/14" },
+        { src: "images/dessins/effondrement_11.jpg", caption: "<em>Roches</em>, 5/14" },
+        { src: "images/dessins/effondrement_14.jpg", caption: "<em>Écoulement</em>, 6/14" },
+        { src: "images/dessins/effondrement_5.jpg", caption: "<em>Mer de silice</em>, 7/14" },
+        { src: "images/dessins/effondrement_9.jpg", caption: "<em>Pleine lune</em>, 8/14" },
+        { src: "images/dessins/effondrement_4.jpg", caption: "<em>Inhumate</em>, 9/14" },
+        { src: "images/dessins/effondrement_10.jpg", caption: "<em>Restes</em>, 10/14" },
+        { src: "images/dessins/effondrement_6.jpg", caption: "<em>Mezzanine</em>, 12/14" },
+        { src: "images/dessins/effondrement_13.jpg", caption: "<em>Disparition</em>, 14/14" },
+        { src: "images/dessins/effondrement_15.jpg", caption: "<em>Astres</em>, 13/14" },
       ],
       extras: [
         { src: "images/expositions/dnsep_8.jpg", caption: "DNSEP HEAR Strasbourg 2024" },
         { src: "images/expositions/dnsep_9.jpg", caption: "DNSEP HEAR Strasbourg 2024" },
-        { src: "images/expositions/pdw_1.jpg", caption: "Premier prix Pierre David-Weill 2025, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France" },
-        { src: "images/expositions/pdw_2.jpg", caption: "Premier prix Pierre David-Weill 2025, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France" },
-        { src: "images/expositions/pdw_3.jpg", caption: "Premier prix Pierre David-Weill 2025, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France" },
-        { src: "images/expositions/pdw_4.jpg", caption: "Premier prix Pierre David-Weill 2025, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France, photo Dominique Germond" },
+        { src: "images/expositions/pdw_1.jpg", caption: "Premier prix <em>Pierre David-Weill 2025</em>, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France" },
+        { src: "images/expositions/pdw_2.jpg", caption: "Premier prix <em>Pierre David-Weill 2025</em>, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France" },
+        { src: "images/expositions/pdw_3.jpg", caption: "Premier prix <em>Pierre David-Weill 2025</em>, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France" },
+        { src: "images/expositions/pdw_4.jpg", caption: "Premier prix <em>Pierre David-Weill 2025</em>, décerné par l'Académie des Beaux-arts, Pavillon comtesse de caen, Institut de France, photo Dominique Germond" },
       ]
     },
     { 
       type: "single", 
       src: "images/dessins/endzone.jpg",
-      caption: "Endzone, 2024, lavis sur papier, 31x49 cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Endzone</em>, 2024, lavis sur papier, 31x49 cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: [
-         { src: "images/expositions/dresden_4.jpg", caption: "Détail d'exposition Dresden Residents, 2026, Galerie Alte Feuerwache Loschwitz, Dresde. Photo Daniel Reiswich" },
+         { src: "images/expositions/dresden_4.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde. Photo Daniel Reiswich" },
       ]
     },
     { 
       type: "single", 
       src: "images/dessins/chapi.jpg",
-      caption: "Chapi, 2024, fusain, pierre noire et pastel sur papier Moulin du Verger, 33x50,5 cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Chapi</em>, 2024, fusain, pierre noire et pastel sur papier Moulin du Verger, 33x50,5 cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     {
       type: "serie",
-      serieTitle: "Série Contes et Merveilles",
-      serieInfo: "Contes et merveilles, 2023, série de 4 dessins au fusain et à la pierre noire sur papier Moulin du Verger",
+      serieTitle: "Série Contes et merveilles",
+      serieInfo: "<em>Contes et merveilles</em>, 2023, série de 4 dessins au fusain et à la pierre noire sur papier Moulin du Verger",
       serieDesc: "",
       images: [
-        { src: "images/dessins/contes_1.jpg", caption: "Contes et merveilles (1), 34x36 cm" },
-        { src: "images/dessins/contes_2.jpg", caption: "Contes et merveilles (2), 33x44 cm" },
-        { src: "images/dessins/contes_3.jpg", caption: "Contes et merveilles (3), 28x18 cm" },
-        { src: "images/dessins/contes_4.jpg", caption: "Carbone (4), 29x21 cm" },
+        { src: "images/dessins/contes_1.jpg", caption: "<em>Contes et merveilles (1)</em>, 34x36 cm" },
+        { src: "images/dessins/contes_2.jpg", caption: "<em>Contes et merveilles (2)</em>, 33x44 cm" },
+        { src: "images/dessins/contes_3.jpg", caption: "<em>Contes et merveilles (3)</em>, 28x18 cm" },
+        { src: "images/dessins/contes_4.jpg", caption: "<em>Carbone (4)</em>, 29x21 cm" },
       ],
       extras: []
     },
     {
       type: "serie",
-      serieTitle: "Série Homesickness",
-      serieInfo: "Homesickness, 2021, carnet de dessins à l’encre de chine et à la gouache, 39 pages, 15x21 cm",
+      serieTitle: "Série <em>Homesickness</em>",
+      serieInfo: "<em>Homesickness</em>, 2021, carnet de dessins à l’encre de chine et à la gouache, 39 pages, 15x21 cm",
       serieDesc: "Reliure cousue main et boite",
       images: [
         { src: "images/dessins/homesickness_1.jpg", caption: "vue du carnet ouvert" },
@@ -1540,69 +1540,69 @@ const DATA = {
     { 
       type: "single", 
       src: "images/dessins/camps_1.jpg",
-      caption: "Camps de César, 2025, fusain, pierre noire et pastel sur papier Moulin du Verger, 54x80 cm",  
+      caption: "<em>Camps de César</em>, 2025, fusain, pierre noire et pastel sur papier Moulin du Verger, 54x80 cm",  
       extra: "dessin réalisée lors d'une résidence à la Menuiserie, Quesnel-Aubry, 2025. <br>Recherche autour des carrières de l'Oise", 
       photos: []
     },
      {
       type: "serie",
-      serieTitle: "Série Piliers",
-      serieInfo: "Piliers, lavis, fusain, pierre noire et pastel sur papier préparé avec gesso et sable, 53x38 cm, 2025 ",
+      serieTitle: "Série <em>Piliers</em>",
+      serieInfo: "<em>Piliers</em>, lavis, fusain, pierre noire et pastel sur papier préparé avec gesso et sable, 53x38 cm, 2025 ",
       serieDesc: "Série de dessin réalisée lors d'une résidence à la Menuiserie, Quesnel-Aubry, 2025",
       images: [
-        { src: "images/dessins/piliers_2.jpg", caption: "Piliers (1)" },
-        { src: "images/dessins/piliers_3.jpg", caption: "Piliers (2)" },
-        { src: "images/dessins/piliers_1.jpg", caption: "Piliers (3)" },
+        { src: "images/dessins/piliers_2.jpg", caption: "<em>Piliers (1)</em>" },
+        { src: "images/dessins/piliers_3.jpg", caption: "<em>Piliers (2)</em>" },
+        { src: "images/dessins/piliers_1.jpg", caption: "<em>Piliers (3)</em>" },
       ],
       extras: []
     },
     { 
       type: "single", 
       src: "images/dessins/roots.jpg",
-      caption: "Roots, 2024, fusain, pierre noire et pastel sur papier Moulin du Verger, 35x52 cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Roots</em>, 2024, fusain, pierre noire et pastel sur papier Moulin du Verger, 35x52 cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/dessins/gateway.jpg",
-      caption: "Gateway illusions, 2024, fusain et pierre noire sur papier Moulin du Verger, 42x30 cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Gateway illusions</em>, 2024, fusain et pierre noire sur papier Moulin du Verger, 42x30 cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/dessins/no_escape.jpg",
-      caption: "No escape, 2024, lavis et gouache blanche sur papier couché, 31x45cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>No escape</em>, 2024, lavis et gouache blanche sur papier couché, 31x45cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/dessins/tout-a-labime.jpg",
-      caption: "Tout à l'abime, 2024, lavis sur papier couché, 28x23cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Tout à l'abime</em>, 2024, lavis sur papier couché, 28x23cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/dessins/shattered_memories.jpg",
-      caption: "Shattered memories, 2024, lavis et fusain sur papier couché, 43x30 cm",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Shattered memories</em>, 2024, lavis et fusain sur papier couché, 43x30 cm",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/dessins/fange.jpg",
-      caption: "Fange, 2024, lavis, fusain et pierre noire sur papier, 42x30 cm ",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Fange</em>, 2024, lavis, fusain et pierre noire sur papier, 42x30 cm ",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
       src: "images/dessins/temple.jpg",
-      caption: "Temple, 2024, lavis sur papier Canson, 50x65 cm ",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Temple</em>, 2024, lavis sur papier Canson, 50x65 cm ",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. <br>Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     {
@@ -1623,7 +1623,7 @@ const DATA = {
     { 
       type: "single", 
       src: "images/dessins/oree.jpg",
-      caption: "Orée, 2022, fusain, pierre noire sur papier Moulin du Verger, 44x50 cm ",  
+      caption: "<em>Orée</em>, 2022, fusain, pierre noire sur papier Moulin du Verger, 44x50 cm ",  
       extra: "", 
       photos: []
     },
@@ -1650,15 +1650,15 @@ const DATA = {
     { 
       type: "single", 
       src: "images/dessins/boyau.jpg",
-      caption: "Boyau, 2024, lavis et gauche blanche sur papier Pergraphica, 50x36 cm ",  
-      extra: "Dessin réalisé pour le livre «Le Temple de la Pierre qui Tue», 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont, Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
+      caption: "<em>Boyau</em>, 2024, lavis et gauche blanche sur papier Pergraphica, 50x36 cm ",  
+      extra: "Dessin réalisé pour le livre <em>Le Temple de la Pierre qui Tue</em>, 2024, réalisé avec le collectif Bétonite et Cora Marion, imprimé en sérigraphie à 100 exemplaires. Le livre a été sélectionné pour le <em>Prix Unique du Livre 2025</em> , Le Signe, Centre National du Graphisme à Chaumont, Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025 ainsi qu’au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig", 
       photos: []
     },
     { 
       type: "single", 
-      src: "images/dessins/boyau.jpg",
-      caption: "Écoulement, 2023, lavis sur papier Lana, 34x54 cm ",  
-      extra: "Dessin réalisé pour la revue Moshpit Magique 'Echos des ruisseaux de celleux qui se perdent et renaissent dans la mousse', 2024", 
+      src: "images/dessins/ecoulement.jpg",
+      caption: "<em>Écoulement</em>, 2023, lavis sur papier Lana, 34x54 cm ",  
+      extra: "Dessin réalisé pour la revue Moshpit Magique <em>Echos des ruisseaux de celleux qui se perdent et renaissent dans la mousse</em>, 2024", 
       photos: []
     },
   ],
@@ -1667,9 +1667,9 @@ const DATA = {
     
     {
       type: "serie",
-      serieTitle: "Cave of Doom - Bétonite",
+      serieTitle: "<em>Cave of Doom</em> - Bétonite",
       serieInfo: "Exposition du collectif Bétonite, en carte blanche à l'occasion du Festival Central Vapeur 2023, à Maison Rose, Strasbourg",
-      serieDesc: "Central Vapeur contacte le collectif Bétonite et nous donne carte blanche pour réaliser une exposition pour la 13eme édition du Festival Central Vapeur. <br>Nous choisissons d’investir les glacières souterraines de Maison Rose, au et travaillons in-situ entre décembre 2022 et mars 2023. <br><br>Cave of Doom, l’exposition qui en résulte, propose une expérience immersive. Elle est pensée en résonnance directe avec l’espace, mettant le focus sur la scénographie avec des installations in-situ mêlant travaux personnels et collectifs. <br>Nous avons plongé ces grands volumes dans l’obscurité, avec seuls quelques îlots de lumières raréfiée donnant une impression d’infini. Les visiteur·ice·s sont invité·e·s à s’y perdre, et leurs yeux s’habituant à la pénombre, voient peu à peu surgir les installations. <br>C’est une invitation ambigüe a l’exploration du lieux, contraignant le visiteur à prendre son temps, à mobiliser tous ses sens. Dans notre intervention les œuvres apparaissaient comme les éléments d’un écosystème. <br>L’exposition était pensée avec un rythme propre à chaque espace ; lieu de passage ou de recueillement. <br><br>Nous y avons présenté des sculptures, des vidéos projetées ou diffusées sur écrans, une composition musicale ambiante, des livres d’artistes et éditions, des peintures, gravures et dessins. <br><br>À l’occasion de la clôture du festival, nous organisons une soirée de finissage le 2 avril 2023 où nous invitons cinq artistes sonores à performer en réaction à l’exposition (Aquila Lescene, Trrrnctrn, Hglauque, le duo Dimeklk).<br><br><em>Captation vidéo : Téano Horn, Léo Bayle — Montage : Hippolyte Tessier</em><br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:4px;'><iframe src='https://www.youtube.com/embed/P6l-6u5tJOo' title='Cave of Doom - collectif Bétonite' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>",
+      serieDesc: "Central Vapeur contacte le collectif Bétonite et nous donne carte blanche pour réaliser une exposition pour la 13eme édition du Festival Central Vapeur. <br>Nous choisissons d’investir les glacières souterraines de Maison Rose, au et travaillons in-situ entre décembre 2022 et mars 2023. <br><br><em>Cave of Doom</em>, l’exposition qui en résulte, propose une expérience immersive. Elle est pensée en résonnance directe avec l’espace, mettant le focus sur la scénographie avec des installations in-situ mêlant travaux personnels et collectifs. <br>Nous avons plongé ces grands volumes dans l’obscurité, avec seuls quelques îlots de lumières raréfiée donnant une impression d’infini. Les visiteur·ice·s sont invité·e·s à s’y perdre, et leurs yeux s’habituant à la pénombre, voient peu à peu surgir les installations. <br>C’est une invitation ambigüe a l’exploration du lieux, contraignant le visiteur à prendre son temps, à mobiliser tous ses sens. Dans notre intervention les œuvres apparaissaient comme les éléments d’un écosystème. <br>L’exposition était pensée avec un rythme propre à chaque espace ; lieu de passage ou de recueillement. <br><br>Nous y avons présenté des sculptures, des vidéos projetées ou diffusées sur écrans, une composition musicale ambiante, des livres d’artistes et éditions, des peintures, gravures et dessins. <br><br>À l’occasion de la clôture du festival, nous organisons une soirée de finissage le 2 avril 2023 où nous invitons cinq artistes sonores à performer en réaction à l’exposition (Aquila Lescene, Trrrnctrn, Hglauque, le duo Dimeklk).<br><br><em>Captation vidéo : Téano Horn, Léo Bayle — Montage : Hippolyte Tessier</em><br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:4px;'><iframe src='https://www.youtube.com/embed/P6l-6u5tJOo' title='Cave of Doom - collectif Bétonite' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>",
       images: [
         { src: "images/collectifs/cod_1.jpg", caption: "" },
         { src: "images/collectifs/cod_2.jpg", caption: "" },
@@ -1687,7 +1687,7 @@ const DATA = {
     },
     {
       type: "serie",
-      serieTitle: "Le Puits du Dindon - Bétonite",
+      serieTitle: "<em>Le Puits du Dindon</em> - Bétonite",
       serieInfo: "exposition du collectif Bétonite avec Alix Rondot et Esther Grande, en carte blanche à l'occasion du Festival Central Vapeur 2025, La BCDM, Strasbourg",
       serieDesc: "Avant de se figer en roche, les cailloux liquides des grottes ressemblaient un peu à des gros tas de peinture dégoulinants. <br>Qu'est-ce qui se passerait si toutes les cavités se remettaient à fondre ? il en coulerait, des flux poisseux et poissonneux ! <br>Les images perdues dans les profondeurs ressortiraient comme des bouts de déchets qu'on est content-es de retrouver. <br>Les remous qui les cracheraient vers la surface les auraient teintées de leur épaisse salive de salpêtre, et elles en auraient mal vieilli... ou pas... ça c'est à vous de voir. quand on descend dans les puits en s'aidant de ses lacets et qu'on a des bougies dans les trous de nez, on est jamais trop sûre de comment ça va se passer. Mais si on trouve le moyen de remonter, on aura bien rigolé. Et peut-être même qu'en suivant les indications, on y aura trouvé un peu d'or dans les concrétions...<br><br>glouglouglou...<br><br><em>«Les larmes des anciens»</em>, photogrammétrie Bétonite, travail 3D et vidéo par Gaël Didier-Bezault.<br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:8px;'><iframe src='https://www.youtube.com/embed/5g5Rb2PCaHc' title='Le Puits du Dindon - collectif Bétonite' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>",
       images: [
@@ -1719,29 +1719,29 @@ const DATA = {
     },
     {
       type: "serie",
-      serieTitle: "Pourigord - duo avec Jean-Baptiste Petit",
+      serieTitle: "<em>Pourigord</em> - duo avec Jean-Baptiste Petit",
       serieInfo: "Livre d'artiste réalisé avec Jean-Baptiste Petit en sérigraphie, gravure sur bois, cyanotype, pochoir, photolithographie. Reliure cousue main. 2021",
-      serieDesc: "POURIGORD est un livre-témoin, produit de déambulations, d’errances et d’oubli de soi dans une nature occupée par des vestiges industriels. <br><br>Signé et numéroté à 30 exemplaires dont 5 expérimentaux, tous uniques. <br><br>Intervention avec Jean-Baptiste Petit pour présenter le projet à l'occasion du cycle de conférence 'Paysages Incertains' à la MISHA, Strasbourg",
+      serieDesc: "<em>POURIGORD</em> est un livre-témoin, produit de déambulations, d’errances et d’oubli de soi dans une nature occupée par des vestiges industriels. <br><br>Signé et numéroté à 30 exemplaires dont 5 expérimentaux, tous uniques. <br><br>Intervention avec Jean-Baptiste Petit pour présenter le projet à l'occasion du cycle de conférence 'Paysages Incertains' à la MISHA, Strasbourg",
       images: [
-        { src: "images/expositions/pourigord_1.jpg", caption: "vue des livres fermés" },
-        { src: "images/expositions/pourigord_2.jpg", caption: "double page et petits dépliants insérés sur la dernière page" },
-        { src: "images/expositions/pourigord_3.jpg", caption: "petit carnet inséré dans la première page" },
-        { src: "images/expositions/pourigord_4.jpg", caption: "double page sérigraphiée" },
+        { src: "images/collectifs/pourigord_1.jpg", caption: "vue des livres fermés" },
+        { src: "images/collectifs/pourigord_2.jpg", caption: "double page et petits dépliants insérés sur la dernière page" },
+        { src: "images/collectifs/pourigord_3.jpg", caption: "petit carnet inséré dans la première page" },
+        { src: "images/collectifs/pourigord_4.jpg", caption: "double page sérigraphiée" },
       ],
       extras: [
-        { src: "images/expositions/pourigord_2.JPG", caption: "Exposition Pourigord avec Jean-Baptiste Petit, Garage Coop, Strasbourg, 2021" },
-        { src: "images/expositions/pourigord_3.JPG", caption: "Exposition Pourigord avec Jean-Baptiste Petit, Garage Coop, Strasbourg, 2021" },
-        { src: "images/expositions/pourigord_1.JPG", caption: "Affiche de l'exposition Pourigord avec Jean-Baptiste Petit, Garage Coop, Strasbourg, 2021" },
-        { src: "images/expositions/paysages_1.jpg", caption: "Affiche de l'exposition 'Paysages incertains' tirée d'une page du livre Pourigord" },
-        { src: "images/expositions/pourigord_5.jpg", caption: "exposition du projet Pourigord pour Paysages Incertains à la MISHA Strasbourg" },
-        { src: "images/expositions/pourigord_6.jpg", caption: "exposition du projet Pourigord pour Paysages Incertains à la MISHA Strasbourg" },
+        { src: "images/expositions/pourigord_2_ex.jpg", caption: "Exposition <em>Pourigord</em> avec Jean-Baptiste Petit, Garage Coop, Strasbourg, 2021" },
+        { src: "images/expositions/pourigord_3_ex.jpg", caption: "Exposition <em>Pourigord</em> avec Jean-Baptiste Petit, Garage Coop, Strasbourg, 2021" },
+        { src: "images/expositions/pourigord_1_ex.jpg", caption: "Affiche de l'exposition <em>Pourigord</em> avec Jean-Baptiste Petit, Garage Coop, Strasbourg, 2021" },
+        { src: "images/expositions/paysages_1.jpg", caption: "Affiche de l'exposition <em>Paysages incertains</em> tirée d'une page du livre Pourigord" },
+        { src: "images/collectifs/pourigord_5.jpg", caption: "exposition du projet <em>Pourigord</em> pour <em>Paysages Incertains</em> à la MISHA Strasbourg" },
+        { src: "images/collectifs/pourigord_6.jpg", caption: "exposition du projet <em>Pourigord</em> pour <em>Paysages Incertains</em> à la MISHA Strasbourg" },
       ]
     },
     {
       type: "serie",
-      serieTitle: "Le Temple de la Pierre qui Tue - Bétonite",
+      serieTitle: "<em>Le Temple de la Pierre qui Tue</em> - Bétonite",
       serieInfo: "Collectif Bétonite et Cora Marion, livre sérigraphié en noir et blanc d'une centaine de pages, relié main, affiches dépliantes, 2024",
-      serieDesc: "Le Temple de la Pierre qui Tue est un livre en sérigraphie d’une centaine de pages regroupant un an de travail collectif sous forme de dessins en noir et blanc, très denses en détails. <br>Autour d’une forme de narration contemplative, nous avons imaginé un nouveau lieu souterrain similaire à ceux dont nous sommes familier·e·s, mais cette fois-ci créé de toute pièce. <br><br>Ce projet se présente comme une déambulation dans un temple mythique. Au fil des pages, le·a lecteur·ice se trouve confronté·e à des scènes qui apparaissent comme des vues rapportées du temple et des reproduction de fresques peintes sur les murs, racontant des lieux, des évènements, des vies passées, se plongeant plus profondéments dans les couloirs osbcurs. Certaines pages se déplient faisant apparaitre des dessins grand format. <br><br>Nous avons invité certains artistes à nous rejoindre (Étienne Puaux, Cora Marion, Lucie Lozano, Jack Tezam, Colas Renard). <br>À l’instar des précédents projets, nous avons employé le procédé du « Matching&Making ». Ainsi après avoir produit un peu moins d’une centaine de dessins, nous les avons regroupés dans le but de les organiser et de construire une narration et un univers cohérent. Nous aimons penser la création d’un livre comme une architecture. La couverture est une porte qu’on ouvre et on s’engouffre dans le long corridor des pages, les dépliants sont des salles dans lesquelles on pénètre. <br><br><br>Il est imprimé en sérigraphie à 100 exemplaires. <br><br><br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025. <br>Il est également exposé au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig ",
+      serieDesc: "<em>Le Temple de la Pierre qui Tue</em> est un livre en sérigraphie d’une centaine de pages regroupant un an de travail collectif sous forme de dessins en noir et blanc, très denses en détails. <br>Autour d’une forme de narration contemplative, nous avons imaginé un nouveau lieu souterrain similaire à ceux dont nous sommes familier·e·s, mais cette fois-ci créé de toute pièce. <br><br>Ce projet se présente comme une déambulation dans un temple mythique. Au fil des pages, le·a lecteur·ice se trouve confronté·e à des scènes qui apparaissent comme des vues rapportées du temple et des reproduction de fresques peintes sur les murs, racontant des lieux, des évènements, des vies passées, se plongeant plus profondéments dans les couloirs osbcurs. Certaines pages se déplient faisant apparaitre des dessins grand format. <br><br>Nous avons invité certains artistes à nous rejoindre (Étienne Puaux, Cora Marion, Lucie Lozano, Jack Tezam, Colas Renard). <br>À l’instar des précédents projets, nous avons employé le procédé du « Matching&Making ». Ainsi après avoir produit un peu moins d’une centaine de dessins, nous les avons regroupés dans le but de les organiser et de construire une narration et un univers cohérent. Nous aimons penser la création d’un livre comme une architecture. La couverture est une porte qu’on ouvre et on s’engouffre dans le long corridor des pages, les dépliants sont des salles dans lesquelles on pénètre. <br><br><br>Il est imprimé en sérigraphie à 100 exemplaires. <br><br><br>Le livre a été sélectionné pour «le Prix Unique du Livre 2025 » , Le Signe, Centre National du Graphisme à Chaumont. <br>Il y est exposé pour la 5e Biennale internationale de design graphique, du 21 mai au 19 octobre 2025. <br>Il est également exposé au Best Book Design from all over the World 2026 du StiftungBuchkunst à Leipzig ",
       images: [
         { src: "images/collectifs/pqt_1.jpg", caption: "vue des livres fermés" },
         { src: "images/collectifs/pqt_2.jpg", caption: "double page, dessin de Thomas Jacoulet'" },
@@ -1779,9 +1779,9 @@ const DATA = {
     },
      {
       type: "serie",
-      serieTitle: "Défonce Poussive - Bétonite",
-      serieInfo: "Défonce Poussive, livre en sérigraphie et impression laser, 20 x 28 cm, 2022.",
-      serieDesc: "Défonce Poussive, notre premier livre, est une déambulation qui restitue notre travail collectif de peintures qui s’était étalé sur une période d’un an et demi au sein d’un premier lieu souterrain resté secret. <br>Nous avons traité le livre comme un espace à pénétrer, une invitation à la découverte d’un lieu. Nous y proposons au lecteur une évolution parmi des salles entièrement peintes du sol aux plafonds, représentées par photogrammétrie. Le livre a été pensé comme une traduction du lieu, mais ce dernier est également devenu la matrice du livre lorsque nous avons peint le titre de la première de couverture sur un plafond. À la façon d’un jeu vidéo, on part à la découverte de l’ouvrage en explorant les recoins et accumulant des trésors. Il est peuplé de différents objets éditoriaux imbriqués les uns dans les autres. Ceux-ci déclinent l’espace peint en une maquette à construire et une affiche à déplier. Cachée dans les rabats de la jaquette, une collection d’autocollants est comme une invitation à peupler d’autres lieux. <br>Défonce Poussive est imprimé en sérigraphie et impression numérique à soixante exemplaires.<br><br><em>«Les larmes des anciens»</em>, photogrammétrie Bétonite, travail 3D et vidéo par Gaël Didier-Bezault.<br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:8px;'><iframe src='https://www.youtube.com/embed/5g5Rb2PCaHc' title='Les larmes des anciens' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>",
+      serieTitle: "<em>Défonce Poussive</em> - Bétonite",
+      serieInfo: "<em>Défonce Poussive</em>, livre en sérigraphie et impression laser, 20 x 28 cm, 2022.",
+      serieDesc: "<em>Défonce Poussive</em>, notre premier livre, est une déambulation qui restitue notre travail collectif de peintures qui s’était étalé sur une période d’un an et demi au sein d’un premier lieu souterrain resté secret. <br>Nous avons traité le livre comme un espace à pénétrer, une invitation à la découverte d’un lieu. Nous y proposons au lecteur une évolution parmi des salles entièrement peintes du sol aux plafonds, représentées par photogrammétrie. Le livre a été pensé comme une traduction du lieu, mais ce dernier est également devenu la matrice du livre lorsque nous avons peint le titre de la première de couverture sur un plafond. À la façon d’un jeu vidéo, on part à la découverte de l’ouvrage en explorant les recoins et accumulant des trésors. Il est peuplé de différents objets éditoriaux imbriqués les uns dans les autres. Ceux-ci déclinent l’espace peint en une maquette à construire et une affiche à déplier. Cachée dans les rabats de la jaquette, une collection d’autocollants est comme une invitation à peupler d’autres lieux. <br>Défonce Poussive est imprimé en sérigraphie et impression numérique à soixante exemplaires.<br><br><em>«Les larmes des anciens»</em>, photogrammétrie Bétonite, travail 3D et vidéo par Gaël Didier-Bezault.<br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:8px;'><iframe src='https://www.youtube.com/embed/5g5Rb2PCaHc' title='Les larmes des anciens' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>",
       images: [
         { src: "images/collectifs/defonce_1.jpg", caption: "" },
         { src: "images/collectifs/defonce_2.jpg", caption: "vue du livre fermé, jaquette sérigraphiée." },
@@ -1798,13 +1798,13 @@ const DATA = {
         { src: "images/collectifs/defonce_13.jpg", caption: "" },
       ],
       extras: [
-        { src: "", pdf:"pdf/texte_6.pdf", caption: "présentation de ce travail dans la revue Intermédialités ; Histoire et théorie des arts, des lettres et des techniques, numéro 45, printemps 2025" },
+        { src: "", pdf:"pdf/texte_6.pdf", caption: "présentation de ce travail dans la revue <em>Intermédialités</em> ; Histoire et théorie des arts, des lettres et des techniques, numéro 45, printemps 2025" },
       ]
     },
     {
       type: "serie",
-      serieTitle: "The Fellowship of the Sbrek - Bétonite",
-      serieInfo: "Fanzine bougies, collectif Bétonite (collaboration Amélie Royer, Hippolyte Tessier), format fermé 21 x 29 cm, 2023.",
+      serieTitle: "<em>The Fellowship of the Sbrek</em> - Bétonite",
+      serieInfo: "<em>The Fellowship of the Sbrek</em>, collectif Bétonite (collaboration Amélie Royer, Hippolyte Tessier), format fermé 21 x 29 cm, 2023.",
       serieDesc: "",
       images: [
         { src: "images/collectifs/bougi_1.jpg", caption: "vue du livre fermé" },
@@ -1822,7 +1822,7 @@ const DATA = {
    Laissez pdf:"" si pas de PDF pour cette exposition. */
 const expositions = [
   {
-    title: "Enterrer le soleil - Le Quadilatère, Beauvais",
+    title: "<em>Enterrer le soleil</em> - Le Quadilatère, Beauvais",
     info: "Exposition collective au centre d'art Le Quadrilatère, Beauvais <br>Du 4 avril au 30 août 2026 <br><br>Artistes et architectes racontent le monde souterrain. <br><br>Commissariat : Alexandre Estaquet-Legrand et Lucy Hofbauer. <br><br>Avec : Ugo Arsac / Bernard Calet / Raphaël Dallaporta / Marthe Flandrin / André Hermant / Bertrand Gadenne / Georg Gatsas / Apolline Grivelet / Gordon Matta-Clark / Léa Namer / Arash Nassiri / Celeste Rogosin / Amélie Royer / Onishi Yasuaki / Bruno Yvonnet",
     images: ["images/expositions/enterrer_1.jpg", "images/expositions/enterrer_2.jpg","images/expositions/enterrer_3.jpg","images/expositions/enterrer_4.jpg","images/expositions/enterrer_5.jpg","images/expositions/enterrer_7.jpg","images/expositions/enterrer_8.jpg"],
     captions: ["Vue générale", "Affiche de l'exposition. Le Quadrilatere: @le.quadrilatere / Photo @raphaeldallaporta / Création graphique @depli_ds", "Vue de la peinture Dans la nuit et de la série de dessins Effondrement", "Vue de la peinture Rivière sans étoiles", "Vue de la peinture Rivière sans étoiles et de la série de dessins Effondrement", "Vue de la série de dessins Effondrement et de la gravure Death of dreams shall be a beautiful end", "vue globale avec l'installation d'Onishi Yasuaki"],
@@ -1837,22 +1837,22 @@ const expositions = [
     pdf: "pdf/dn_1.pdf"
   },
   {
-    title: "Dresden Residents - Galerie Alte Feuerwache Loschwitz",
+    title: "<em>Dresden Residents</em> - Galerie Alte Feuerwache Loschwitz",
     info: "Exposition collective avec Peili Huang, Katrin Huber et Elizaveta Ostapenko. <br>Galerie Alte Feuerwache Loschwitz, Dresden. Du 9 au 19 mars 2026 <br><br>Exposition à l'occasion de ma résidence à La Grafikwerkstatt à Dresde, Allemagne.",
     images: ["images/expositions/dresden_1.jpg", "images/expositions/dresden_2.jpg", "images/expositions/dresden_3.jpg", "images/expositions/dresden_4.jpg","images/expositions/dresden_5.jpg"],
     captions: ["Affiche réalisée lors de ma résidence à la Grafikwerkstatt pour l'exposition, plaque en verni mou, aquatinte et pointe sèche", "Vue exterieure de la galerie", "vue d'exposition", "vue d'exposition. Photo Daniel Reiswich","vue d'exposition"],
     pdf: ""
   },
   {
-    title: "Premier prix Pierre David-Weill 2025",
-    info: "Exposition collective Prix Pierre David-Weill 2025.<br>Du 20 mars au 1er juin 2025 au Pavillon Comtesse de Caen, Institut de France <br><br>Je reçois à cette occasion le premier prix, décerné par l'Académie des beaux-arts.",
+    title: "Premier prix <em>Pierre David-Weill 2025</em>",
+    info: "Exposition collective <em>Prix Pierre David-Weill 2025</em>.<br>Du 20 mars au 1er juin 2025 au Pavillon Comtesse de Caen, Institut de France <br><br>Je reçois à cette occasion le premier prix, décerné par l'Académie des beaux-arts.",
     description: "<em>«Tête-à-tête avec Amélie Royer, 1er Prix de Dessin Pierre David-Weill»</em>, portrait vidéo, Académie des beaux-arts, avril 2025.<br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:4px;'><iframe src='https://www.youtube.com/embed/tuwv6Vqn5qA' title='Tête-à-tête avec Amélie Royer' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>",
     images: ["images/expositions/pdw_1.jpg", "images/expositions/pdw_2.jpg", "images/expositions/pdw_3.jpg", "images/expositions/pdw_4.jpg", "images/expositions/pdw_6.jpg", "images/expositions/pdw_7.jpg", "images/expositions/pdw_8.jpg", "images/expositions/pdw_9.jpg", "images/expositions/pdw_10.jpg","images/expositions/pdw_13.jpg"],
     captions: ["Vue d'exposition", "Affiches devant l'exposition", "vue d'exposition", "Discours d'inauguration, © photo Dominique Germond", "Remise des prix sous la coupole, novembre 2025 ©Académie des Beaux-Arts", "Dessins de la série Effondrement", "Dessins de la série Effondrement", "Dépliant de l'exposition", "Vue du vernissage", "affiche ©Académie des Beaux-Arts"],
     pdf: "pdf/pdw_1.pdf"
   },
   {
-    title: "Orfeo",
+    title: "<em>Orfeo</em>",
     info: "Collaboration avec le Paris Mozart Orchestra pour Orfeo. <br><br>Première présentation à la Cité de la musique, Philharmonie de Paris, pour les 80 ans de Claire Gibault, le 2 novembre 2025. <br><br><br>Distribution : <br>Claire Gibault, Direction. <br>Suliane Brahim, récitante / sociétaire de la Comédie-Française <br>Paris Mozart Orchestra. <br><br>'Son tableau « Entrée principale » est projeté pendant le mélologue Orfeo de la compositrice italienne Silvia Colasanti  pour offrir une plongée visuelle au cœur du mythe d’Orphée et d’Eurydice, créant un moment suspendu où musique, mots et arts visuels se rejoignent pour réinventer ce célèbre récit.' Paris Mozart Orchestra",
     images: ["images/expositions/orfeo.jpg"],
     captions: ["Vue du concert du 2 novembre à la Cité de la musique, Paris"],
@@ -1860,14 +1860,14 @@ const expositions = [
     description: "<em>Orfeo</em> se présente comme un concerto pour voix récitante et ensemble, alternant parole et musique. Cette dernière a une fonction dramaturgique intense : elle exprime un état primordial de la pensée, encore au stade du ressenti. À certains moments, les sons amplifient le texte ; à d'autres, ils disent l'indicible. La musique cohabite parfois avec la parole, parfois s'y substitue. Lors de la remontée d'Orphée des Enfers, une section instrumentale traduit la tension entre désir de savoir et tabou, suivie d'une réinterprétation de l'aria de Monteverdi confiée à un cor derrière le public, exprimant la joie et la douleur d'Eurydice. Plus loin, la musique seule remplace les récits d'Orphée, puis évoque sa mort, sa souffrance, son désir et sa descente définitive aux Enfers. Ovide en offre une image saisissante : la tête et la lyre d'Orphée, entraînées par le fleuve, continuent de chanter, tandis que la nature semble répondre à ces sons par le chant différent de l'eau et de la rive.<br><span style='display:block;text-align:right;font-style:italic;font-size:13px;margin-top:4px;'>Silvia Colasanti</span><br>Cette peinture accompagne une traversée des enfers, une quête tragique dans les profondeurs des mondes souterrains. Cet espace se présente comme un seuil : à l'image d'Orphée, nous sommes confrontés à l'obscurité, à cet abîme silencieux qui nous arrache Eurydice.<br><span style='display:block;text-align:right;font-style:italic;font-size:13px;margin-top:4px;'>Amélie Royer</span>"
   },
   {
-    title: "Monotype et Collection",
+    title: "<em>Monotype et Collection</em>",
     info: "Exposition collective. <br>Commissariat : Clément Fourment / Production : Frac Picardie / Clermont <br>Du 15 novembre au 21 décembre 2025. <br><br>En juin 2025, j’ai été invitée par Clement Fourment pour réaliser un monotype à son atelier dans le cadre de son projet Monotype Club . La série de tous ces monotypes est exposée en lien avec des oeuvres de la collection du FRAC Picardie. <br><br>Monotypes : <br>Pierre Bellot, Jérémy Bajulaz, Kamil Bouzoubaa-Grivel, Fabrice Cazenave, Dominique De Beir, Xavier Drong, Gabriel Folli, Alice Gauthier, Jochen Gerner, Maïté Grandjouan, Raul Illarramendi, Ellande Jaureguiberry, Johan Larnouhet, Yann Le Bec, Anaïs Lelièvre, Rob Miles, François Olislaeger, Garance Matton, Stéphanie Mansy, Frédéric Messager, Aurélie Pagès, Pascal Pesez, Lucile Piketty, Luc Pommet, Leopold Poyet, Marisa Rappard, François Réau, Amélie Royer, Guillaume Valenti, Romain Trinquand, Davor Vrankić et Katarzyna Wiesiolek. <br><br>Collection Frac Picardie : <br>Pierre Alechinsky, Pierrette Bloch, Christian Bonnefoi, Marc Couturier, Edith Dekyndt, Hiroki Doi, Roland Flexner, Clément Fourment Ji Yun-Fei, Stéphane Lallemand, Gabriel Orozco, Giuseppe Penone, Raymond Pettibon, Yvan Salomone, Cy Twombly et Christophe Vigouroux",
-    images: ["images/expositions/monotype_1.jpg", "images/expositions/monotype_2.jpg", "images/expositions/monotype_3.jpg"],
+    images: ["images/expositions/monotype_1_ex.jpg", "images/expositions/monotype_2.jpg", "images/expositions/monotype_3.jpg"],
     captions: ["Affiche de l'exposition", "Vue d'exposition © Photo Clément Fourment", "Vue d'exposition © Photo Clément Fourment"],
     pdf: ""
   },
   {
-    title: "Le Puits du Dindon - collectif Bétonite",
+    title: "<em>Le Puits du Dindon</em> - collectif Bétonite",
     info: "Exposition du collectif Bétonite (Jean-Baptiste Petit, Hippolyte Tessier, Thomas Jacoulet, Amélie Royer) avec Alix Rondot et Esther Grande. <br>Du 29 mars au 6 avril 2026, à La BCDM, Strasbourg.<br><br>Carte blanche à l'occasion du Festival Central Vapeur 2025.",
     images: ["images/collectifs/dindon_1.jpg", "images/collectifs/dindon_2.jpg", "images/collectifs/dindon_3.jpg", "images/collectifs/dindon_4.jpg", "images/collectifs/dindon_5.jpg", "images/collectifs/dindon_6.jpg", "images/collectifs/dindon_7.jpg", "images/collectifs/dindon_8.jpg","images/collectifs/dindon_9.jpg", "images/collectifs/dindon_10.jpg", "images/collectifs/dindon_11.jpg", "images/collectifs/dindon_12.jpg", "images/collectifs/dindon_13.jpg", "images/collectifs/dindon_14.jpg", "images/collectifs/dindon_15.jpg", "images/collectifs/dindon_16.jpg", "images/collectifs/dindon_17.jpg", "images/collectifs/dindon_18.jpg","images/collectifs/dindon_21.jpg", "images/collectifs/dindon_22.jpg", "images/collectifs/dindon_23.jpg"],
     captions: ["", "", "","","","","","","","","","","","","","","","", "carte de l'exposition","Affiche sérigraphiée de l'évènement © collectif Bétonite ",  "Évènement dans le programme du festival Central Vapeur 2025 © Central Vapeur" ],
@@ -1875,7 +1875,7 @@ const expositions = [
     description: "Avant de se figer en roche, les cailloux liquides des grottes ressemblaient un peu à des gros tas de peinture dégoulinants. Qu'est-ce qui se passerait si toutes les cavités se remettaient à fondre ? Il en coulerait, des flux poisseux et poissonneux ! Les images perdues dans les profondeurs ressortiraient comme des bouts de déchets qu'on est content·es de retrouver. Les remous qui les cracheraient vers la surface les auraient teintées de leur épaisse salive de salpêtre, et elles en auraient mal vieilli… ou pas… ça c'est à vous de voir. Quand on descend dans les puits en s'aidant de ses lacets et qu'on a des bougies dans les trous de nez, on est jamais trop sûre de comment ça va se passer. Mais si on trouve le moyen de remonter, on aura bien rigolé. Et peut-être même qu'en suivant les indications, on y aura trouvé un peu d'or dans les concrétions…<br><br>glouglouglou…<br><br><em>«Les larmes des anciens»</em>, photogrammétrie Bétonite, travail 3D et vidéo par Gaël Didier-Bezault.<br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:8px;'><iframe src='https://www.youtube.com/embed/5g5Rb2PCaHc' title='Le Puits du Dindon - collectif Bétonite' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>"
   },
   {
-    title: "Cave of Doom - collectif Bétonite",
+    title: "<em>Cave of Doom</em> - collectif Bétonite",
     info: "Exposition du collectif Bétonite (Jean-Baptiste Petit, Hippolyte Tessier, Thomas Jacoulet, Amélie Royer). <br>Du 18 mars au 2 avril 2023, à Maison Rose, Strasbourg.<br><br>Carte blanche à l'occasion du Festival Central Vapeur 2023. ",
     images: ["images/collectifs/cod_1.jpg","images/collectifs/cod_2.jpg","images/collectifs/cod_3.jpg", "images/collectifs/cod_4.jpg", "images/collectifs/cod_5.jpg", "images/collectifs/cod_6.jpg", "images/collectifs/cod_7.jpg", "images/collectifs/cod_8.jpg", "images/collectifs/cod_9.jpg", "images/collectifs/cod_10.jpg"],
     captions: ["", "", "","","","","","","Affiche sérigraphiée de l'évènement © collectif Bétonite ", "Évènement dans le programme du festival Central Vapeur 2023 © Central Vapeur" ],
@@ -1883,8 +1883,8 @@ const expositions = [
     description: "Central Vapeur contacte le collectif Bétonite et nous donne carte blanche pour réaliser une exposition pour la 13e édition du Festival Central Vapeur. Nous choisissons d'investir les glacières souterraines de Maison Rose et travaillons in-situ entre décembre 2022 et mars 2023.<br><br><em>Cave of Doom</em>, l'exposition qui en résulte, propose une expérience immersive. Elle est pensée en résonance directe avec l'espace, mettant le focus sur la scénographie avec des installations in-situ mêlant travaux personnels et collectifs. Nous avons plongé ces grands volumes dans l'obscurité, avec seuls quelques îlots de lumière raréfiée donnant une impression d'infini. Les visiteur·ice·s sont invité·e·s à s'y perdre, et leurs yeux s'habituant à la pénombre, voient peu à peu surgir les installations. C'est une invitation ambiguë à l'exploration du lieu, contraignant le visiteur à prendre son temps, à mobiliser tous ses sens. Dans notre intervention, les œuvres apparaissaient comme les éléments d'un écosystème. L'exposition était pensée avec un rythme propre à chaque espace ; lieu de passage ou de recueillement. Nous y avons présenté des sculptures, des vidéos projetées ou diffusées sur écrans, une composition musicale ambiante, des livres d'artistes et éditions, des peintures, gravures et dessins.<br><br>À l'occasion de la clôture du festival, nous organisons une soirée de finissage le 2 avril 2023 où nous invitons cinq artistes sonores à performer en réaction à l'exposition (Aquila Lescene, Trrrnctrn, Hglauque, le duo Dimeklk).<br><br><em>Captation vidéo : Téano Horn, Léo Bayle — Montage : Hippolyte Tessier</em><br><br><div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:4px;'><iframe src='https://www.youtube.com/embed/P6l-6u5tJOo' title='Cave of Doom - collectif Bétonite' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>"
   },
   {
-    title: "Sortie de route - 22Galerie",
-    info: "Exposition collective et co-curation Sortie de Route, à 22Galerie, Ivry-sur-Seine. <br>Du 21 au 29 septembre 2024. <br><br>Artistes exposé.e.s : Jean-Baptiste Petit, Lucie Lozano, Hippolyte Teissier, Grégoire Aldebert, Alban Turquois, Cléo Garcia, Amélie Royer, Stephen Paulet, Marc Laroza, Easy Homey, Léo Bonheur, Gilles Orage, Aiia Gonchar, Boginette, Timothée Li, Jérémie Reynaud, Davy Toussaint",
+    title: "<em>Sortie de route</em> - 22Galerie",
+    info: "Exposition collective et co-curation <em>Sortie de Route</em>, à 22Galerie, Ivry-sur-Seine. <br>Du 21 au 29 septembre 2024. <br><br>Artistes exposé.e.s : Jean-Baptiste Petit, Lucie Lozano, Hippolyte Teissier, Grégoire Aldebert, Alban Turquois, Cléo Garcia, Amélie Royer, Stephen Paulet, Marc Laroza, Easy Homey, Léo Bonheur, Gilles Orage, Aiia Gonchar, Boginette, Timothée Li, Jérémie Reynaud, Davy Toussaint",
     images: ["images/expositions/sortie_1.jpg","images/expositions/sortie_2.jpg", "images/expositions/sortie_3.jpg", "images/expositions/sortie_4.jpg", "images/expositions/sortie_5.jpg", "images/expositions/sortie_6.jpg"],
     captions: [" Visualisation 3D de la salle du sous-sol par © Gaël Gdb", "Affiche de l'exposition, © Dessin : Grégoire Aldebert, Amélie Royer et Jean-Baptiste Petit, Graphisme : Homey", "Vue d'expositon © Photo Lucie Lozano","Vue d'expositon © Photo Lucie Lozano","Vue d'expositon © Photo Lucie Lozano","Vue d'expositon © Photo Lucie Lozano" ],
     pdf: ""
@@ -1897,23 +1897,23 @@ const expositions = [
     pdf: ""
   },
   {
-    title: "Jouer dans la tempête",
-    info: "Exposition collective Jouer dans la tempête, à la Fabrikulture, Hegenheim, Suisse. <br>Du 18 au 26 mai 2024. <br><br>Commissariat par Félix Barbey, Chloé Duplessis de Pouzilhac, Louise Fabry, Iris Langlois, Yeongeun Park. <br><br>Artistes exposé.e.s :Zahra Allouche-Binet - Félix Barbey - Hugo Barthélemy - Simon Belhomme - Milo Berger - Agathe Bernard - Aurélia Besse - Marjorie Bodet - Loris Bouguettoucha - Luce Castry - Manon Chanthavong - Zoée Dahan - Olga de Bastier - Chloé Duplessis de Pouzilhac - Amélie Dupuy - Louise Fabry - Carla- Luce Gatineau - Aiia Gonchar - Qiuyang Guo - Rose Hervé - Océane Julmann - Mahdi Ladhem - Iris Langlois - Marc Laroza - Flora Le Pipec - Yeongeun Park - Stephen Paulet - Sofia Piñon - Étienne Puaux - Hikmet Qrookeh - Amélie Royer - Shamil Shaaev - Emma Slaymaker - Baran Ulusoy.",
+    title: "<em>Jouer dans la tempête</em>",
+    info: "Exposition collective <em>Jouer dans la tempête</em>, à la Fabrikulture, Hegenheim, Suisse. <br>Du 18 au 26 mai 2024. <br><br>Commissariat par Félix Barbey, Chloé Duplessis de Pouzilhac, Louise Fabry, Iris Langlois, Yeongeun Park. <br><br>Artistes exposé.e.s :Zahra Allouche-Binet - Félix Barbey - Hugo Barthélemy - Simon Belhomme - Milo Berger - Agathe Bernard - Aurélia Besse - Marjorie Bodet - Loris Bouguettoucha - Luce Castry - Manon Chanthavong - Zoée Dahan - Olga de Bastier - Chloé Duplessis de Pouzilhac - Amélie Dupuy - Louise Fabry - Carla- Luce Gatineau - Aiia Gonchar - Qiuyang Guo - Rose Hervé - Océane Julmann - Mahdi Ladhem - Iris Langlois - Marc Laroza - Flora Le Pipec - Yeongeun Park - Stephen Paulet - Sofia Piñon - Étienne Puaux - Hikmet Qrookeh - Amélie Royer - Shamil Shaaev - Emma Slaymaker - Baran Ulusoy.",
     images: ["images/expositions/fabrik_1.jpg","images/expositions/fabrik_2.jpg", "images/expositions/fabrik_3.jpg"],
     captions: ["Vue d'exposition © photo Mathieu Boisadan", "Vue d'exposition © photo Mathieu Boisadan","Vue d'exposition © photo Mathieu Boisadan" ],
     pdf: "",
     description: "« Incubée dans cette ancienne usine textile, <em>Jouer dans la tempête</em> est une exposition proposant une promenade entre œuvres picturales et sculpturales. C'est un parcours éclectique qui se distant en paysages superposés et crée des interstices de moments partagés. »"
   },
   {
-    title: "Prix Gravix 2024 - exposition des finalistes",
-    info: "Exposition collective des finalistes du Prix Gravix 2024 à la Fondation Taylor. <br>Du 16 mai au 8 juin 2024.",
+    title: "Prix <em>Gravix 2024</em> - exposition des finalistes",
+    info: "Exposition collective des finalistes du Prix <em>Gravix 2024</em> à la Fondation Taylor. <br>Du 16 mai au 8 juin 2024.",
     images: ["images/expositions/gravix_1.jpg","images/expositions/gravix_2.jpg", "images/expositions/gravix_3.jpg"],
     captions: ["Carton d'invitation © Fondation Taylor", "Vue d'exposition © Fondation Taylor","Vue d'exposition" ],
     pdf: ""
   },
   {
-    title: "22 years later... - 22Galerie",
-    info: "Exposition collective 22 years later..., à 22Galerie, Ivry-sur-Seine. <br>Du 31 octobre au 6 novembre 2025. <br><br>Curation : Grégoire Aldebert, Hippolyte Tessier et Homey. <br><br>Artistes exposé.e.s : Alix Rondot / Amélie Royer / Azadeh Cohen-Mercury / Basile Bibas / Boginette / Elias Attarch / Esther Grande / Etienne Puaux / Grégoire Aldebert / Homey / Hippolyte Tessier / Jean-Baptiste Petit / Lio Bonehr / Marc Velut Laroza / Marie-lou Halford / Odo / Pablo Martenot /Stephen Paulet / Thomas Jacoulet / Zamouri Esperanza / Etienne Oudin / Jean Squire. ",
+    title: "<em>22 years later...</em> - 22Galerie",
+    info: "Exposition collective <em>22 years later...</em>, à 22Galerie, Ivry-sur-Seine. <br>Du 31 octobre au 6 novembre 2025. <br><br>Curation : Grégoire Aldebert, Hippolyte Tessier et Homey. <br><br>Artistes exposé.e.s : Alix Rondot / Amélie Royer / Azadeh Cohen-Mercury / Basile Bibas / Boginette / Elias Attarch / Esther Grande / Etienne Puaux / Grégoire Aldebert / Homey / Hippolyte Tessier / Jean-Baptiste Petit / Lio Bonehr / Marc Velut Laroza / Marie-lou Halford / Odo / Pablo Martenot /Stephen Paulet / Thomas Jacoulet / Zamouri Esperanza / Etienne Oudin / Jean Squire. ",
     images: ["images/expositions/22_years_1.jpg"],
     captions: ["Affiche de l'exposition © Dessins : Stephen Paulet et Lio Bonehr. Graphisme : Homey" ],
     pdf: ""
@@ -2154,6 +2154,7 @@ function openLightbox(type) {
   if (el) {
     savedScrollY = window.scrollY;
     el.classList.add('open');
+    el.scrollTop = 0;
     window.scrollTo(0, 0);
   }
 }
@@ -2235,24 +2236,24 @@ async function submitForm(e) {
 const ACTUALITES = [
 
   {
-    title: "Enterrer le soleil - Le Quadilatère, Beauvais",
+    title: "<em>Enterrer le soleil</em> - Le Quadilatère, Beauvais",
     text: "Exposition collective au centre d'art Le Quadrilatère, Beauvais<br>Du 4 avril au 30 août 2026.<br><br>Artistes et architectes racontent le monde souterrain.<br><br>Commissariat : Alexandre Estaquet-Legrand et Lucy Hofbauer.<br><br>Avec : Ugo Arsac / Bernard Calet / Raphaël Dallaporta / Marthe Flandrin / André Hermant / Bertrand Gadenne / Georg Gatsas / Apolline Grivelet / Gordon Matta-Clark / Léa Namer / Arash Nassiri / Celeste Rogosin / Amélie Royer / Onishi Yasuaki / Bruno Yvonnet",
     affiche: "images/expositions/enterrer_2.jpg",        // ex: "images/actus/jouer-affiche.jpg"
-    photos: ["images/expositions/enterrer_1.jpg", "images/expositions/enterrer.jpg","images/expositions/enterrer_3.jpg","images/expositions/enterrer_4.jpg","images/expositions/enterrer_5.jpg","images/expositions/enterrer_7.jpg","images/expositions/enterrer_8.jpg"],         // ex: ["images/actus/jouer-1.jpg", "images/actus/jouer-2.jpg"]
+    photos: ["images/expositions/enterrer_1.jpg","images/expositions/enterrer_4.jpg"],         // ex: ["images/actus/jouer-1.jpg", "images/actus/jouer-2.jpg"]
     pdf: "",            // ex: ""
   },
 
   {
-    title: "Prix Gravix 2026 - exposition des finalistes",
+    title: "Prix <em>Gravix 2026</em> - exposition des finalistes",
     text: "Exposition collective des finalistes du Prix Gravix 2024 à la Fondation Taylor. <br>Du 7 mai au 30 mai 2026.",
     affiche: "images/expositions/gravix26_1.jpg",
-    photos: ["images/expositions/gravix26_1.jpg"]
+    photos: []
   },
   {
     title: "Duo show - Drawing Now 2026",
     text: "Drawing Now 2026, salon du dessin contemporain, au Carreau du Temple, Paris. <br>Présenté par la galerie Binôme, duo show avec Guénaëlle de Carbonnière. <br>Du 26 au 29 mars 2026.",
-    affiche: "images/expositions/gravix26_1.jpg",
-    photos: ["images/expositions/dn_2.jpg", "images/expositions/dn_3.jpg", "images/expositions/dn_4.jpg"],
+    affiche: "images/expositions/dn_2.jpg",
+    photos: [],
     pdf: "pdf/dn_1.pdf"
   },
   {
@@ -2374,6 +2375,7 @@ const TEXTES = [
   
   {
   type: "deux-colonnes",
+  titre: "Démarche",
   gauche: "Mon travail s’articule aujourd’hui entre la peinture, la gravure et le dessin. Je développe ma pratique autour de la <strong>représentation du temps</strong><br> et explore différents moyens de le faire résonner plastiquement. Je me concentre dans l’image sur la recherche d’une sensation, celle d’être <strong>immergée dans une ambiance jusqu’à m’y oublier.</strong> Cette ambiance se caractérise par un temps palpable, si lent, si présent, qu’il semble habiter l’espace. <br><br>L’origine de cette recherche s’ancre pour moi dans un désespoir de la jeunesse, du moins de celle qui m’entoure. On se renferme dans la mélancolie, face à un monde qui nous aliène. J’incarne alors un déni de la réalité, je cherche des espaces de refuge, attirée par la marge et fascinée par les espaces qu’elle occupe. <br><br> Ces lieux sont d’importants témoins entropiques. Face à la roche, qui bouge très peu, les derniers échantillons d’outils et aménagements humains se détériorent rapidement, rongés par la rouille ou le moisi. Ces empreintes caractéristiques rendent plus appréhensives l’effondrement qui s’étend dans une temporalité difficilement imaginable. Dans ces espaces de liberté, le temps est suspendu. Je me trouve face à une certaine immobilité ; quand on sort de la temporalité commune, on s’engouffre dans un vide. Je me fonds dans ce silence hypnotisant et y disparaît. Ce ressenti est la cible de mes recherches plastiques, une expression de la mélancolie, plus précisément de l’acédie, que je retrouve notamment dans la peinture romantique. <br><br> La Zone, dans <em>Stalker </em>de Tarkovski trouve un écho dans mon sujet. Le Stalker, personnage principal, y accompagne ceux qui ont perdu espoir. Espace et <strong>entité surnaturelle de silence</strong>, elle est à chaque instant le produit de l’état d’esprit de ceux qui la traversent, une métaphore de notre for intérieur. ",
   droite: "Aussi, c’est dans l’<strong>obscurité</strong> que je fais apparaître mes images. Cette fascination pour le noir va de pair avec mon expérience des <strong>souterrains</strong> . Quand je m’engouffre dans le noir, je me renferme sur moi- même, le temps n’existe plus, mes perceptions de l’espace sont sublimées et se mêlent à l’affect. Les sens sont plus aiguisés et je ressens une impression d’infini. Il y a dans les profondeurs de l’obscurité une sensation d’engloutissement, de désintégration. Puis je vais trouver là de la lumière, un monde à part. C’est comme rentrer dans le sommeil, les lueurs qui apparaissent surviennent comme un rêve. Cette lumière est comme une présence, elle définit l’ambiance, la tension, elle semble flotter dans l’infini. <br><br> Il y a dans l’exploration, une sensation similaire à celle que je cherche dans la création. Comme une pulsion d’oubli de moi-même, pour n’exister qu’à travers ce qui m’entoure : l’<strong>espace de liberté</strong> d’un lieu en marge ou la feuille/plaque/ toile, une atmosphère dont m’imprégner. Ma pratique se nourrit de ces moments que j’ai photographié, elle survient comme une nouvelle temporalité ; je reconstruis pendant un long moment suspendu une scène, son ambiance. Cette étape de réalisation plastique, absorbée dans l’espace de l’image en construction, est une façon presque méditative de me réapproprier mon temps. Mes œuvres sont autant d’invitations à faire une pause, contempler le vide. <br><br>Enfin, je m’intéresse à la figuration. En m’approchant d’un certain réalisme je me rapproche de cette réalité un peu parallèle dans laquelle je me réfugie, je vis dans mes films et les images que je crée en sont des décors. "
   },
