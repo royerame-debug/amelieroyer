@@ -2001,11 +2001,11 @@ function openCarousel(section, index) {
   if (item.type === 'single') {
     // Extract just the title (before the first comma) from the caption
     const titleOnly = (item.caption || '').split(',')[0].trim();
-    document.getElementById('lb-title').textContent = titleOnly || section.charAt(0).toUpperCase() + section.slice(1);
+    document.getElementById('lb-title').innerHTML = titleOnly || section.charAt(0).toUpperCase() + section.slice(1);
     document.getElementById('lb-subtitle').textContent = '';
   } else {
-    document.getElementById('lb-title').textContent = item.serieTitle;
-    document.getElementById('lb-subtitle').textContent = item.serieInfo || '';
+    document.getElementById('lb-title').innerHTML = item.serieTitle;
+    document.getElementById('lb-subtitle').innerHTML = item.serieInfo || '';
   }
 
   // description block
@@ -2079,7 +2079,7 @@ let currentExpo = null, expoIdx = 0;
 function openExpo(index) {
   currentExpo = expositions[index];
   expoIdx = 0;
-  document.getElementById('lb-expo-title').textContent = currentExpo.title;
+  document.getElementById('lb-expo-title').innerHTML = currentExpo.title;
   document.getElementById('lb-expo-info').innerHTML = currentExpo.info;
   // Description block
   const descEl = document.getElementById('lb-expo-desc');
