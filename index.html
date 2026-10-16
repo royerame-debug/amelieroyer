@@ -325,6 +325,12 @@
 
   /* CV */
   .cv-layout { display: grid; grid-template-columns: 1fr auto; gap: 48px; margin: 0 120px; align-items: start; }
+  .cv-deux-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin: 40px 120px 0; align-items: start; }
+  .cv-col { min-width: 0; }
+  .cv-section { padding: 28px 0; border-top: 1px solid var(--border); }
+  .cv-section-title { font-size: 12px; letter-spacing: 0.14em; font-weight: 400; text-transform: uppercase; color: #aaa; margin-bottom: 18px; }
+  .cv-date-light { font-weight: 300; color: #aaa; font-size: 14px; }
+  .cv-year { font-weight: 300; font-size: 13px; color: #aaa; letter-spacing: 0.06em; margin: 22px 0 10px; }
   .cv-text { border: 1px solid var(--border); padding: 24px 28px; }
   .cv-text h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 16px; margin-top: 36px; text-transform: uppercase; }
   .cv-text h3:first-child { margin-top: 0; }
@@ -568,6 +574,7 @@
     #textes-container iframe { width: 100% !important; }
     #textes-container > div { margin-left: 0 !important; margin-right: 0 !important; padding-left: 16px; padding-right: 16px; }
     .cv-layout { grid-template-columns: 1fr; gap: 20px; margin: 0; }
+    .cv-deux-col { grid-template-columns: 1fr; margin: 20px 0 0; }
     .cv-photo-ph { width: 100%; height: 180px; }
     .cv-layout img { width: 100%; height: auto; max-height: 300px; object-fit: cover; }
     .contact-content { margin: 0; font-size: 17px; }
@@ -756,121 +763,141 @@
             <p>Avec Jean-Baptiste Petit, Thomas Jacoulet et Hippolyte Tessier.<br>
             Pratique collective de fresque, dessin, édition, vidéo et installation autour des mondes souterrains.</p>
           </div>
-
           <h3 class="cv-h3-light">Duo avec Jean-Baptiste Petit</h3>
           <div class="cv-entry">
             <p>Travail sur la représentation du territoire et de ses vestiges industriels autour des techniques d'impression artisanales avec une approche expérimentale.</p>
           </div>
         </div>
-
         <h3 class="cv-h3-light">Représentation Galerie Binome</h3>
-          <div class="cv-entry">
-            <p>Paris, FR — <a href="https://www.galeriebinome.com" target="_blank" style="color:#888;">galeriebinome.com</a></p>
-          </div>
-
-        <!-- FORMATION -->
-        <h3>FORMATION :</h3>
-        <div class="cv-entry"><span class="cv-date">2016–2017 :</span><p>MANAA, École Estienne, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">2017–2019 :</span><p>DMA Gravure, Mention très bien, École Estienne, Paris</p></div>
         <div class="cv-entry">
-          <span class="cv-date">2019–2020 :</span>
-          <p>FCND (Formation Complémentaire Non-Diplomante) :
-          <span class="cv-stage"><span class="cv-stage-date">Septembre – Octobre</span> — Stage à l'<strong>atelier de lithographie Clot</strong>, Paris. Travail sur machine plate et édition d'une de mes lithographies.</span>
-          <span class="cv-stage"><span class="cv-stage-date">Novembre – Décembre</span> — Stage à l'<strong>atelier associatif Bo Halbirk</strong>, Paris.</span>
-          <span class="cv-stage"><span class="cv-stage-date">Janvier – Février</span> — Stage aux <strong>ateliers Morets</strong>, en impression taille-douce et accompagnement d'artistes, Paris.</span>
-          <span class="cv-stage"><span class="cv-stage-date">Mars – Mai</span> — Stage auprès de Jacques Brejoux et Nadine Dumain au <strong>Moulin du Verger</strong>, en fabrication artisanale de papier (selon une reconstitution des techniques traditionnelles en France du XVII<sup>e</sup> siècle), recherche autour de ce sujet, Puymoyen.</span>
-          <span class="cv-stage"><span class="cv-stage-date">Juin</span> — Stage auprès de l'artiste-graveur <strong>Pablo Flaiszman</strong>, Paris.</span>
-          </p>
+          <p>Paris, FR — <a href="https://www.galeriebinome.com" target="_blank" style="color:#888;">galeriebinome.com</a></p>
         </div>
-        <div class="cv-entry"><span class="cv-date">2020–2022 :</span><p>DNA art, <strong>félicitations du jury</strong>, atelier Peinture(s), HEAR, Strasbourg</p></div>
-        <div class="cv-entry"><span class="cv-date">2022–2024 :</span><p>DNSEP art, <strong>félicitations du jury</strong>, atelier Peinture(s), HEAR, Strasbourg</p></div>
-
-        <!-- EXPOSITIONS ET RÉSIDENCES -->
-        <h3>EXPOSITIONS ET RÉSIDENCES :</h3>
-        <div class="cv-entry"><span class="cv-date">Novembre 2021 :</span><p>Exposition <em>Pourigord</em> avec Jean-Baptiste Petit, <strong>Garage Coop</strong>, Strasbourg</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai 2022 :</span><p>Exposition collective <em>Pointe et Burin, Graveurs de l'Est de la France</em>, <strong>Fondation Taylor</strong>, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai 2022 :</span><p>Exposition collective <em>Mordu·e·s</em>, galerie <strong>Le Préau</strong>, Maxéville</p></div>
-        <div class="cv-entry"><span class="cv-date">Juin 2022 :</span><p>Résidence et restitution en duo avec Jean-Baptiste Petit, <strong>espace Bouchor</strong>, Art-sous-x, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Octobre 2022 :</span><p>Exposition <em>Paysages incertains</em>, <strong>MISHA</strong> (Maison Interuniversitaire des Sciences de l'Homme – Alsace), Strasbourg. <strong>Artiste-intervenante</strong> au cycle de conférence <em>Paysages incertains</em>.</p></div>
-        <div class="cv-entry"><span class="cv-date">Mars 2023 :</span><p>Exposition <em>Cave of Doom</em>, collectif Bétonite, <strong>carte blanche Central Vapeur</strong>, Festival Central Vapeur 2023, Maison Rose, Strasbourg</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai 2024 :</span><p>Exposition collective <em>Jouer dans la tempête</em>, <strong>Fabrikulture</strong>, Hegenheim</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai – Juin 2024 :</span><p>Finaliste du prix de gravure <strong>Gravix</strong>, exposition à la <strong>Fondation Taylor</strong>, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Juin 2024 :</span><p>Exposition <em>Le Temple de la Pierre qui Tue</em>, collectif Bétonite, <strong>Forte Prenestino</strong>, CrackFestival 2024, Rome, Italie</p></div>
-        <div class="cv-entry"><span class="cv-date">Septembre 2024 :</span><p>Exposition collective et co-curation de <em>Sortie de route</em>, <strong>22Galerie</strong>, Pleins Feux 2024, Ivry-sur-Seine</p></div>
-        <div class="cv-entry"><span class="cv-date">Mars – Juin 2025 :</span><p>Exposition au <strong>Pavillon Comtesse de Caen</strong>, <strong>Prix de dessin Pierre David-Weill</strong>, Institut de France, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Mars – Avril 2025 :</span><p>Exposition <em>Le Puits du Dindon</em>, collectif Bétonite, <strong>carte blanche Central Vapeur</strong>, Festival Central Vapeur 2025, BCDM, Strasbourg</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai – Octobre 2025 :</span><p>Exposition pour le <strong>Prix Unique du Livre</strong>, 5<sup>e</sup> Biennale internationale de design graphique, <strong>Le Signe</strong>, Centre National du Graphisme, Chaumont — puis Stiftung Buchkunst, <strong>Best Book Design from all over the World 2025</strong>, Francfort, Allemagne</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai – Juillet 2025 :</span><p>Résidence en carte blanche à <strong>La Menuiserie</strong>, Le Quesnel-Aubry, Picardie. Recherche autour des anciennes carrières de l'Oise.</p></div>
-        <div class="cv-entry"><span class="cv-date">Novembre 2025 :</span><p>Collaboration <em>Orféo</em> avec le <strong>Paris Mozart Orchestra</strong> dirigé par Claire Gibault, concert à la Cité de la musique, Philharmonie de Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Novembre 2025 :</span><p>Exposition collective <em>22 Years Later</em>, <strong>22Galerie</strong>, Ivry-sur-Seine</p></div>
-        <div class="cv-entry"><span class="cv-date">Novembre – Décembre 2025 :</span><p>Exposition collective <em>Monotype &amp; Collection</em>, Clermont, en lien avec le <strong>FRAC Picardie</strong>, curatée par Clément Fourment</p></div>
-
-        <div class="cv-entry"><span class="cv-date">Mars 2026 :</span><p>Duo show avec Guénaëlle de Carbonnières, <strong><em>Drawing Now 2026</em></strong>, Carreau du Temple, Paris, avec la <strong>Galerie Binome</strong></p></div>
-        <div class="cv-entry"><span class="cv-date">Avril – Août 2026 :</span><p>Exposition collective <em>Enterrer le soleil</em>, <strong>Le Quadrilatère</strong>, Beauvais, curation Lucy Hofbauer et Alexandre Estaquet-Legrand</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai 2026 :</span><p>Lauréate du <strong>prix de gravure Gravix 2026</strong>, exposition collective <em>Gravix 2026</em> à la <strong>Fondation Taylor</strong>, Paris</p></div>
-
-        <h3 class="cv-h3-light" style="font-style:italic;">Prochainement :</h3>
-        <div class="cv-entry"><span class="cv-date">2026–2027 :</span><p>Résidente à la <strong>Casa de Velasquez</strong>, Madrid</p></div>
-
-        <!-- BOURSES ET PRIX -->
-        <h3>BOURSES ET PRIX :</h3>
-        <div class="cv-entry"><span class="cv-date">Décembre 2023 :</span><p><strong>Bourse d'aide à la recherche et à la création littéraire</strong> de la ville de Strasbourg, avec le collectif Bétonite</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai 2024 :</span><p>Finaliste du <strong>prix de gravure Gravix</strong>, Fondation Taylor, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Octobre 2024 et 2025 :</span><p>Finaliste deux années consécutives du <strong>Prix Théophile Schuler</strong> de la SAAMS (Société des Amis des Arts et des Musées de Strasbourg)</p></div>
-        <div class="cv-entry"><span class="cv-date">Mars 2025 :</span><p>Sélection du livre <em>Le Temple de la Pierre qui Tue</em>, collectif Bétonite, par Le Signe, Centre National du Graphisme, Chaumont, pour le <strong>Prix Unique du Livre</strong></p></div>
-        <div class="cv-entry"><span class="cv-date">Mars 2025 :</span><p><strong>Bourse Jeun'Est</strong> de la région Grand Est pour l'exposition <em>Le Puits du Dindon</em>, collectif Bétonite</p></div>
-        <div class="cv-entry"><span class="cv-date">Mars 2025 :</span><p><strong>Premier prix Pierre David-Weill</strong>, décerné par l'Académie des beaux-arts, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Juin 2025 :</span><p>Lauréate d'un <strong>atelier de la ville de Strasbourg</strong> au Bastion 14</p></div>
-        <div class="cv-entry"><span class="cv-date">Mai 2026 :</span><p> <strong>Lauréate du prix de gravure Gravix</strong> 2026, <strong>Fondation Taylor</strong>, Paris</p></div>
-
-        <!-- PRESSE -->
-        <h3>PRESSE :</h3>
-        <div class="cv-entry">
-          <p><em>L'œuvre au noir d'Amélie Royer</em>, double page parue dans les <strong>Saisons d'Alsace</strong>, revue trimestrielle des éditions DNA (Dernières Nouvelles d'Alsace), numéro 103. Interview/visite d'atelier, par Hervé Levy et Laurent Réa. Février 2025</p>
-        </div>
-        <div class="cv-entry">
-          <p><em>Tête-à-tête avec Amélie Royer, 1<sup>er</sup> Prix de Dessin Pierre David-Weill</em>, portrait vidéo diffusé sur les réseaux de l'<strong>Académie des beaux-arts</strong> Avril 2025</p>
-        </div>
-        <div class="cv-entry">
-          <p><strong>Intermédialités</strong> — Histoire et théorie des arts, des lettres et des techniques, numéro 45, <em>Réinventer (le paysage)</em>, sous la direction de Hélène Ibata et Gwendolyne Cressman : <em>«Bunker peinture totale»</em>, collectif Bétonite. Printemps 2025</p>
-        </div>
-        <div class="cv-entry">
-          <p><strong>THE ART NEWSPAPER</strong> — <em>À Drawing Now, l'art hors des frontières</em>, Arthur Frydman, 01/03/2026</p>
-        </div>
-        <div class="cv-entry">
-          <p> <em>Des Strasbourgeois en résidence à la Casa de Velasquez en 2026/2027</em>, Les Dernières Nouvelles d'Alsace, 26/05/2026</p>
-        </div>
-        <div class="cv-entry">
-          <p> <em>Nouvelles voix de l'estampe</em>, Maintenant ou jamais, Prix Gravix 2026, Les Echos, 29/05/2026</p>
-        </div>
-       <div class="cv-entry">
-          <p> <em>Prix Gravix 2026</em>, Le choix de la semaine, B.P., Télérama Paris, supplément de Télérama N°3984, 20/05/2026</p>
-        </div>
-
-        <!-- ══════════════════════════════════════════════════
-             POUR AJOUTER UNE ENTRÉE AU CV :
-             Copiez-collez un des blocs ci-dessous selon le type :
-
-             ENTRÉE SIMPLE (date + texte) :
-             <div class="cv-entry"><span class="cv-date">Mois Année :</span><p>Description</p></div>
-
-             ENTRÉE AVEC TITRE EN GRAS :
-             <div class="cv-entry"><span class="cv-date">Mois Année :</span><p><strong>Titre</strong>, détails</p></div>
-
-             NOUVELLE SECTION :
-             <h3>TITRE DE SECTION :</h3>
-        ══════════════════════════════════════════════════ -->
-
-        <!-- PÉDAGOGIE -->
-        <h3>PÉDAGOGIE :</h3>
-        <div class="cv-entry"><span class="cv-date">Novembre – Décembre 2019 :</span><p>Cours de gravure à l'<strong>atelier associatif Bo-Halbirk</strong>, Paris</p></div>
-        <div class="cv-entry"><span class="cv-date">Juin 2024 :</span><p>Atelier de dessin collaboratif, <strong>CrackFestival 2024</strong>, Rome, Italie, avec le collectif Bétonite</p></div>
-        <div class="cv-entry"><span class="cv-date">Janvier 2025 :</span><p>Atelier de dessin collaboratif très grand format, invitation de David Vanderh - <strong>La Gilda</strong>, <strong>Festival Tenderete</strong>, Valence, Espagne, avec le collectif Bétonite</p></div>
-        <div class="cv-entry"><span class="cv-date">Juin 2025 :</span><p>Présentation de mon travail autour des anciennes carrières de Picardie à l'école primaire Saint-André Farivilliers, Picardie, à l'occasion de ma résidence à <strong>La Menuiserie</strong>. Deux ateliers animés.</p></div>
 
       </div>
       <img src="images/cv_1.jpg" alt="Amélie Royer" style="width:220px; height:280px; object-fit:cover; display:block;">
     </div>
+
+    <!-- ═══════════════════════════════════════════════
+         CV EN DEUX COLONNES
+         Structure : cv-deux-col > cv-col-gauche + cv-col-droite
+         Chaque section = div.cv-section avec div.cv-section-title + div.cv-entry
+    ═══════════════════════════════════════════════ -->
+    <div class="cv-deux-col">
+
+      <!-- ════ COLONNE GAUCHE ════ -->
+      <div class="cv-col">
+
+        <!-- ── FORMATION
+             Pour ajouter : <div class="cv-entry"><p>Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Formation</div>
+          <div class="cv-entry"><p>Diplomée d'un DNSEP art, atelier Peinture(s), HEAR, Strasbourg</p></div>
+          <div class="cv-entry"><p>Diplomée d'un DMA Gravure, École Estienne, Paris</p></div>
+          <div class="cv-entry"><p>Formation en gravure taille-douce (Pablo Flaiszman), impression taille-douce (ateliers Morets), fabrication artisanale de papier Moulin du Verger et lithographie.</p></div>
+        </div>
+
+        <!-- ── PRIX
+             Pour ajouter : <div class="cv-entry"><p>Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Prix</div>
+          <div class="cv-entry"><p><strong>Premier prix <em>Pierre David-Weill</em> 2025</strong>, Académie des beaux-arts, Paris</p></div>
+          <div class="cv-entry"><p><strong>Lauréate prix <em>Gravix 2026</em></strong></p></div>
+          <div class="cv-entry"><p>Finaliste, prix Gravix 2024</p></div>
+          <div class="cv-entry"><p>Finaliste, Prix Theolphile Schuler 2024 puis 2025 de la SAAMS (Société des Amis des Arts et des Musées de Strasbourg)</p></div>
+          <div class="cv-entry"><p>Sélection Prix Unique du Livre 2025, Le Signe, Chaumont, pour une édition du collectif Bétonite</p></div>
+        </div>
+
+        <!-- ── RÉSIDENCES
+             Pour ajouter : <div class="cv-entry"><p>Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Résidences</div>
+          <div class="cv-entry"><p><strong>2026-2027 : Casa de Velazquez, Madrid, Espagne.</strong></p></div>
+          <div class="cv-entry"><p>05-07/2025 : carte blanche à La Menuiserie, Quesnel-Aubry, Oise. Travail de recherche autour des anciennes carrières de Picardie.</p></div>
+          <div class="cv-entry"><p>03-04/2026 : résidence croisée de la ville de Strasbourg, à la Grafikwerkstatt, Dresde, Allemagne.</p></div>
+        </div>
+
+        <!-- ── BOURSES
+             Pour ajouter : <div class="cv-entry"><p>Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Bourses</div>
+          <div class="cv-entry"><p>Lauréate d'un atelier de la ville de Strasbourg <em>Bastion XIV</em></p></div>
+          <div class="cv-entry"><p>Aide à la recherche et à la création littéraire de la ville de Strasbourg, collectif Bétonite</p></div>
+          <div class="cv-entry"><p><em>Jeun'Est</em>, région Grand Est pour l'exposition <em>Le Puits du Dindon</em>, collectif Bétonite</p></div>
+        </div>
+
+        <!-- ── PRESSE
+             Pour ajouter : <div class="cv-entry"><p><span class="cv-date-light">mm/aaaa</span> : Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Presse</div>
+          <div class="cv-entry"><p><span class="cv-date-light">02/2025</span> : <em>L'oeuvre au noir d'Amélie Royer</em>, double page Saisons d'Alsace, éditions DNA, n°103. Par Hervé Levy et Laurent Réa.</p></div>
+          <div class="cv-entry"><p><span class="cv-date-light">04/2025</span> : <em>Tête-à-tête avec Amélie Royer, 1er Prix de Dessin Pierre David-Weill</em>, portrait vidéo, réseaux de l'Académie des beaux-arts.</p></div>
+          <div class="cv-entry"><p><span class="cv-date-light">05/2025</span> : <strong>Intermédialités</strong> n°45, <em>Réinventer (le paysage) : Bunker peinture totale</em>, collectif Bétonite</p></div>
+          <div class="cv-entry"><p><span class="cv-date-light">03/2026</span> : THE ART NEWSPAPER — <em>À Drawing Now, l'art hors des frontières</em>, Arthur Frydman</p></div>
+          <div class="cv-entry"><p><span class="cv-date-light">05/2026</span> : <em>Des Strasbourgeois en résidence à la Casa de Velasquez en 2026/2027</em>, Les DNA</p></div>
+          <div class="cv-entry"><p><span class="cv-date-light">05/2026</span> : <em>Prix Gravix 2026</em>, Le choix de la semaine, Télérama Paris, N°3984</p></div>
+        </div>
+
+        <!-- ── COLLECTIONS
+             Pour ajouter : <div class="cv-entry"><p>Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Collections</div>
+          <div class="cv-entry"><p>Collection Gravix musée intercommunal de Paris Est Marne &amp; Bois</p></div>
+          <div class="cv-entry"><p>Collections privées.</p></div>
+        </div>
+
+        <!-- ── INTERVENTIONS
+             Pour ajouter : <div class="cv-entry"><p>Texte</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Interventions</div>
+          <div class="cv-entry"><p>Intervention au cycle de conférence <em>Paysages incertains</em>, MISHA, Strasbourg</p></div>
+          <div class="cv-entry"><p>Présentation à l'école publique primaire Saint-André Farivilliers, Oise (résidence à La Menuiserie). Animation d'ateliers.</p></div>
+          <div class="cv-entry"><p>Atelier de dessin très grand format, festival <em>Tenderete</em>, Valence, Espagne, collectif Bétonite.</p></div>
+          <div class="cv-entry"><p>Atelier de dessin collaboratif, <em>CrackFestival 2024</em>, Rome, Italie, collectif Bétonite</p></div>
+          <div class="cv-entry"><p>Cours de gravure, atelier Bo-Halbirk, Paris.</p></div>
+        </div>
+
+      </div><!-- fin colonne gauche -->
+
+      <!-- ════ COLONNE DROITE ════ -->
+      <div class="cv-col">
+
+        <!-- ── EXPOSITIONS
+             Pour ajouter une année  : <p class="cv-year">XXXX</p>
+             Pour ajouter une expo   : <div class="cv-entry"><p>_ <em>Titre</em>, Lieu, Ville</p></div> ── -->
+        <div class="cv-section">
+          <div class="cv-section-title">Expositions</div>
+
+          <p class="cv-year">2026</p>
+          <div class="cv-entry"><p>_ <em><strong>Enterrer le soleil</strong></em>, <strong>Le Quadilatère</strong>, Beauvais.</p></div>
+          <div class="cv-entry"><p>_ Duo show avec Guénaëlle de Carbonnières pour <em><strong>Drawing Now</strong></em>, Paris, Galerie Binome</p></div>
+          <div class="cv-entry"><p>_ <em>Art on Paper</em>, Bruxelles, Belgique, Galerie Christine Colon (Liège)</p></div>
+          <div class="cv-entry"><p>_ <em>Gravix 2026</em>, Fondation Taylor, Paris</p></div>
+          <div class="cv-entry"><p>_ <em>Dresden Residents 2026</em>, Alte Feuerwache Loschwitz, Dresde, Allemagne.</p></div>
+
+          <p class="cv-year">2025</p>
+          <div class="cv-entry"><p>_ <em><strong>Prix Pierre David-Weill</strong></em>, <strong>Pavillon Comtesse de Caen</strong>, Institut de France, Paris</p></div>
+          <div class="cv-entry"><p>_ <em>Monotype &amp; Collection</em>, Clermont de l'Oise, en lien avec le FRAC Picardie, curation Clément Fourment.</p></div>
+          <div class="cv-entry"><p>_ Collaboration <em>Orféo</em>, Paris Mozart Orchestra dirigé par Claire Gibault, Philarmonie de Paris.</p></div>
+          <div class="cv-entry"><p>_ <em>Le Puits du Dindon</em>, collectif Bétonite, carte blanche Festival Central Vapeur 2025, BCDM, Strasbourg.</p></div>
+          <div class="cv-entry"><p>_ <em>22 Years Later</em>, 22Galerie, Ivry sur Seine</p></div>
+          <div class="cv-entry"><p>_ <em>Prix Unique du Livre</em>, Le Signe, Chaumont puis Best Book Design from all over the World 2026, Stiftung Buchkunst, Francfort</p></div>
+
+          <p class="cv-year">2023/2024</p>
+          <div class="cv-entry"><p>_ <em>Jouer dans la tempête</em>, Fabrikulture, Hegenheim, Suisse</p></div>
+          <div class="cv-entry"><p>_ <em>Sortie de route</em>, 22Galerie, Ivry sur Seine</p></div>
+          <div class="cv-entry"><p>_ <em>Gravix 2024</em>, Fondation Taylor, Paris</p></div>
+          <div class="cv-entry"><p>_ <em>Cave of Doom</em>, collectif Bétonite, carte blanche Festival Central Vapeur 2023, Maison Rose, Strasbourg</p></div>
+
+          <p class="cv-year">2022</p>
+          <div class="cv-entry"><p>_ <em>Paysages incertains</em>, MISHA, Strasbourg</p></div>
+          <div class="cv-entry"><p>_ <em>Mordu·e·s</em>, galerie Le Préau, Maxéville</p></div>
+          <div class="cv-entry"><p>_ <em>Pointe et Burin 2022</em>, Fondation Taylor, Paris</p></div>
+
+        </div>
+
+      </div><!-- fin colonne droite -->
+
+    </div><!-- fin cv-deux-col -->
 
     <div class="page-footer">© 2026 Amélie Royer / ADAGP. Tous droits réservés.</div>
   </div>
