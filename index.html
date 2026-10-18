@@ -319,9 +319,11 @@
   .actu-pdf a:hover { opacity: 0.5; }
 
   .text-block {
-    margin: 0 120px 64px; border: 1px solid var(--border);
-    padding: 24px 28px; font-size: 16px; font-weight: 300; line-height: 1.8;
+    margin: 0 120px 0; border: none; border-top: 1px solid var(--border);
+    padding: 48px 0; font-size: 16px; font-weight: 300; line-height: 1.8;
   }
+  .text-block:first-child { border-top: none; padding-top: 0; }
+  .text-block:last-child { border-bottom: 1px solid var(--border); }
 
   /* CV */
   .cv-layout { display: grid; grid-template-columns: 1fr auto; gap: 48px; margin: 0 120px; align-items: start; }
@@ -459,16 +461,28 @@
     letter-spacing: 0.03em;
   }
 
-  .texte-outer { margin: 0 120px 36px; }
+  .texte-outer {
+    margin: 0 120px 0;
+    border-top: 1px solid var(--border);
+    padding: 48px 0;
+  }
+  .texte-outer:first-child { border-top: none; padding-top: 0; }
+  .texte-outer:last-child { border-bottom: 1px solid var(--border); }
 
   /* Titre de bloc texte */
   .texte-titre {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
-    letter-spacing: 0.04em;
-    margin-bottom: 16px;
-    color: var(--black);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-top: 56px;
+    margin-bottom: 20px;
+    color: #999;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
   }
+  .text-block:first-child .texte-titre,
+  .texte-outer:first-child .texte-titre { margin-top: 0; }
 
   /* Lien PDF dans textes */
   .texte-pdf-link {
@@ -2342,6 +2356,7 @@ const ACTUALITES = [
   },
 
 
+
   
 ];
 
@@ -2490,13 +2505,13 @@ function buildTextes() {
   container.innerHTML = TEXTES.map(item => {
     if (item.type === 'texte') {
       const titre = item.titre ? `<div class="texte-titre">${item.titre}</div>` : '';
-      const leg = item.legende ? `<p style="font-size:13px;font-weight:300;color:#666;margin-top:10px;">${item.legende}</p>` : '';
+      const leg = item.legende ? `<p style="font-size:13px;font-weight:300;color:#666;margin-top:12px;margin-bottom:0;">${item.legende}</p>` : '';
       return `<div class="text-block">${titre}${item.contenu}${leg}</div>`;
     }
 
     if (item.type === 'image') {
       const titre = item.titre ? `<div class="texte-titre">${item.titre}</div>` : '';
-      const leg = item.legende ? `<p style="font-size:13px;font-weight:300;color:#666;margin-top:10px;">${item.legende}</p>` : '';
+      const leg = item.legende ? `<p style="font-size:13px;font-weight:300;color:#666;margin-top:12px;margin-bottom:0;">${item.legende}</p>` : '';
       return `<div class="text-block" style="padding:0;border:none;">
         ${titre}
         <img src="${item.src}" alt="${item.legende || ''}" style="width:100%;display:block;">
@@ -2505,7 +2520,7 @@ function buildTextes() {
     }
 
     if (item.type === 'texte-image') {
-      const leg = item.legende ? `<p style="font-size:13px;font-weight:300;color:#666;margin-top:10px;">${item.legende}</p>` : '';
+      const leg = item.legende ? `<p style="font-size:13px;font-weight:300;color:#666;margin-top:12px;margin-bottom:0;">${item.legende}</p>` : '';
       return `<div class="text-block" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;border:none;padding:0 0 24px 0;">
         <div>${item.contenu}</div>
         <div><img src="${item.src}" alt="${item.legende || ''}" style="width:100%;display:block;">${leg}</div>
