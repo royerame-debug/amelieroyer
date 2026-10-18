@@ -527,7 +527,8 @@
   }
 
   @media (max-width: 650px) {
-    header { padding: 14px 20px 10px; flex-wrap: wrap; gap: 8px; }
+    header { padding: 14px 20px 10px; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+    nav { justify-content: flex-end; width: 100%; }
     .logo { font-size: 18px; }
     nav { gap: 16px; flex-wrap: wrap; }
     .nav-label { font-size: 15px; }
@@ -2320,7 +2321,7 @@ async function submitForm(e) {
 const ACTUALITES = [
 
   
-  {
+{
     title: "Résidente à la Casa de Velazquez, Madrid",
     text: "Résidente de septembre 2026 à juillet 2027 à la Casa de Velazquez, Madrid, atelier gravure. <br>Présentation de la saison artistique le 4 novembre à destination des professionnel.le.s de l'art, en présence de la marraine de la promotion Annette Messager  ",
     affiche: "images/expositions/casa.jpg",
@@ -2356,7 +2357,6 @@ const ACTUALITES = [
   },
 
 
-
   
 ];
 
@@ -2377,7 +2377,7 @@ function buildActualites() {
     let photos = '';
     if (actu.photos && actu.photos.length > 0) {
       const photoItems = actu.photos.map(p =>
-        `<img src="${p}" style="width:100%;display:block;">`
+        `<img src="${p}" style="width:100%;display:block;max-height:420px;object-fit:cover;">`
       ).join('');
       photos = `<div class="actu-photos">${photoItems}</div>`;
     }
