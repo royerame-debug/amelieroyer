@@ -527,8 +527,10 @@
   }
 
   @media (max-width: 650px) {
-    header { padding: 14px 20px 10px; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+    header { padding: 14px 20px 10px; flex-wrap: wrap; gap: 8px; justify-content: space-between; z-index: 2000; }
     nav { justify-content: flex-end; width: 100%; }
+    .dropdown { z-index: 2001; }
+    .nav-item.open .dropdown { display: flex; }
     .logo { font-size: 18px; }
     nav { gap: 16px; flex-wrap: wrap; }
     .nav-label { font-size: 15px; }
@@ -1365,18 +1367,25 @@ const DATA = {
         { src: "images/expositions/dresden_5.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde." },
       ]
     },
-    {
-      type: "serie",
-      serieTitle: "<em>Those who go</em>",
-      serieInfo: "aquatinte, verni mou et pointe sèche, 35,5×53,5 cm, 2025",
-      serieDesc: "Tirages numéroté sur 20, impressions sur BFK Rives",
-      images: [
-        { src: "images/gravures/bellow.jpg", caption: "<em>Those who go bellow</em>" },
-        { src: "images/gravures/bellow_3.jpg", caption: "<em>Those who go beyond</em>" },
+      { 
+      type: "single", 
+      src: "images/gravures/bellow_3.jpg",
+      caption: "<em>Those who go beyond</em>, aquatinte, verni mou et pointe sèche, 35,5×53,5 cm, 2025",  
+      extra: "Tirage numéroté sur 20, impression sur BFK Rives", 
+      photos: [
         { src: "images/gravures/bellow_2.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
         { src: "images/expositions/dresden_3.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
-      ],
-      extras: []
+      ]
+    },
+    { 
+      type: "single", 
+      src: "images/gravures/bellow.jpg",
+      caption: "<em>Those who go below</em>, aquatinte, verni mou et pointe sèche, 35,5×53,5 cm, 2025",  
+      extra: "Tirage numéroté sur 20, impression sur BFK Rives", 
+      photos: [
+        { src: "images/gravures/bellow_2.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
+        { src: "images/expositions/dresden_3.jpg", caption: "Détail d'exposition <em>Dresden Residents</em>, 2026, Galerie Alte Feuerwache Loschwitz, Dresde" },
+      ]
     },
     { 
       type: "single", 
@@ -2321,7 +2330,7 @@ async function submitForm(e) {
 const ACTUALITES = [
 
   
-{
+  {
     title: "Résidente à la Casa de Velazquez, Madrid",
     text: "Résidente de septembre 2026 à juillet 2027 à la Casa de Velazquez, Madrid, atelier gravure. <br>Présentation de la saison artistique le 4 novembre à destination des professionnel.le.s de l'art, en présence de la marraine de la promotion Annette Messager  ",
     affiche: "images/expositions/casa.jpg",
@@ -2355,6 +2364,7 @@ const ACTUALITES = [
     photos: [],
     pdf: "pdf/dn_1.pdf"
   },
+
 
 
   
